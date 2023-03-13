@@ -33,7 +33,6 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    overflow: hidden;
     width: 100%;
     padding: 0.7rem 0.7rem;
     margin-top: 4%;
@@ -49,12 +48,24 @@
       }
     }
 
-    .notice__text {
-      font-size: $b2;
-      font-weight: $w500;
-      margin-left: 1%;
-      animation: marquee 10s linear infinite running;
-      transform: translate(0%);
+    .marquee-container {
+      text-align: left;
+      overflow: hidden;
+      margin-left: 0.5rem;
+
+      .marquee-overflow {
+        width: 1000vw;
+        font-size: 0px;
+
+        .notice__text {
+          font-size: $c1;
+          display: inline-block;
+          animation: marquee 10s linear infinite running;
+          transform: translate(0%);
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
 

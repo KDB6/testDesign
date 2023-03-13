@@ -192,7 +192,6 @@ body.fixed {
     display: flex;
     align-items: center;
     box-sizing: border-box;
-    overflow: hidden;
     width: 100%;
     padding: 0.7rem 0.7rem;
     margin-top: 4%;
@@ -206,12 +205,22 @@ body.fixed {
     width: 2rem;
     height: 2rem;
   }
-  .notice .notice__text {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-left: 1%;
+  .notice .marquee-container {
+    text-align: left;
+    overflow: hidden;
+    margin-left: 0.5rem;
+  }
+  .notice .marquee-container .marquee-overflow {
+    width: 1000vw;
+    font-size: 0px;
+  }
+  .notice .marquee-container .marquee-overflow .notice__text {
+    font-size: 1.4rem;
+    display: inline-block;
     animation: marquee 10s linear infinite running;
     transform: translate(0%);
+    margin: 0;
+    padding: 0;
   }
   @keyframes marquee {
     from {
