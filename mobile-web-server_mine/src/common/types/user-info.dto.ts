@@ -1,0 +1,29 @@
+export interface UserInfoDto {
+    userId?:         number;
+    name?:           string;
+    mobile?:         string;
+    password?:       string;
+    loginId?:        string;
+    birthDt?:        null;
+    regDt?:          Date;
+    detailInfo?:     string;
+    recommend?:      null;
+    loginDt?:        Date;
+    logoutDt?:       null;
+    controllerRole?: string;
+    companyId?:      number;
+    controllerId?:   number;
+    companyName?:    string;
+    businessRegNum?: string;
+    address?:        string;
+    addressDetail?:  string;
+    telephone?:      string;
+    representative?: string;
+    businessType?:   string;
+    businessItem?:   string;
+    contactName?:    string;
+    email?:          string;
+    callerId?:       null;
+    driverId?:       null;
+    disposerId?:     null;
+}
