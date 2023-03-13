@@ -3,7 +3,7 @@
 @media (max-width: 480px) {
   #section01 {
     font-family: $noto;
-    margin-top: 10%;
+    margin-top: 11.5%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -33,6 +33,7 @@
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    overflow: hidden;
     width: 100%;
     padding: 0.7rem 0.7rem;
     margin-top: 4%;
@@ -52,7 +53,30 @@
       font-size: $b2;
       font-weight: $w500;
       margin-left: 1%;
+      overflow: hidden;
+      background: linear-gradient(90deg, #000, #000, #000);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      animation: slideInRight 5s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
     }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: inherit;
+      animation: infinite;
+    }
+
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .slideInRight {
+    animation-name: slideInRight;
   }
 
   // drive
@@ -95,59 +119,72 @@
       }
     }
 
-    .drive__info {
-      color: $white;
-      background: #020018;
-      border-radius: 1.5rem;
-      box-sizing: border-box;
-      width: 100%;
-      padding: 2.5rem 2rem;
-      margin-top: 3%;
-      line-height: 1.1;
+    // swiper
+    swiper-container {
+      width: 30rem;
+      margin-left: auto;
+      margin-right: auto;
 
-      .drive__info-date {
-        font-weight: $w500;
-        font-size: $h3;
+      swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        > span {
-          font-size: $h2;
-          font-weight: $w700;
-          color: #f67c01;
-          margin-right: 1%;
-        }
+        .drive__info {
+          color: $white;
+          background: #020018;
+          border-radius: 1.5rem;
+          box-sizing: border-box;
+          width: 100%;
+          padding: 2.5rem 2rem;
+          margin-top: 3%;
+          line-height: 1.1;
 
-        > em {
-          font-size: $c1;
-          border: 1px solid $white;
-          border-radius: 0.5rem;
-          padding: 0 0.2rem;
-        }
-      }
+          .drive__info-date {
+            font-weight: $w500;
+            font-size: $h3;
 
-      .drive__info-address {
-        font-size: $b2;
-        margin-top: 1rem;
-        line-height: 1.5;
-        border-bottom: 1px solid $gray;
-        padding-bottom: 6%;
-      }
+            > span {
+              font-size: $h2;
+              font-weight: $w700;
+              color: #f67c01;
+              margin-right: 1%;
+            }
 
-      .drive__info-goal {
-        > ul {
-          display: flex;
-          justify-content: space-between;
-          margin: 8% 0;
-
-          > li {
-            font-size: $b2;
-
-            &:first-child {
-              color: $gray;
+            > em {
+              font-size: $c1;
+              border: 1px solid $white;
+              border-radius: 0.5rem;
+              padding: 0 0.2rem;
             }
           }
 
-          &:last-child {
-            margin: 0;
+          .drive__info-address {
+            font-size: $b2;
+            margin-top: 1rem;
+            line-height: 1.5;
+            border-bottom: 1px solid $gray;
+            padding-bottom: 6%;
+          }
+
+          .drive__info-goal {
+            > ul {
+              display: flex;
+              justify-content: space-between;
+              margin: 8% 0;
+
+              > li {
+                font-size: $b2;
+
+                &:first-child {
+                  color: $gray;
+                }
+              }
+
+              &:last-child {
+                margin: 0;
+              }
+            }
           }
         }
       }

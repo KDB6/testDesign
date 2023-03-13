@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="../assets/css/reset.css" />
 
     <link rel="stylesheet" href="../assets/css/home.css" />
+
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -85,28 +91,110 @@
             <div class="dot"></div>
           </div>
         </div>
-        <div class="drive__info">
-          <h2 class="drive__info-date">
-            <span>상차</span> 01.23 (목) 10:00 <em>지</em>
-          </h2>
-          <p class="drive__info-address">
-            경기 양주시 은현면 그루고개로 332<br />그루고개로 332
-          </p>
-          <div class="drive__info-goal">
-            <ul>
-              <li>상차지까지</li>
-              <li>180km</li>
-            </ul>
-            <ul>
-              <li>예상 소요시간</li>
-              <li>1시간 59분</li>
-            </ul>
-            <ul>
-              <li>예상 유류비</li>
-              <li>70,000원</li>
-            </ul>
-          </div>
-        </div>
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          pagination-clickable="true"
+          space-between="30"
+          loop="true"
+        >
+          <swiper-slide
+            ><div class="drive__info">
+              <h2 class="drive__info-date">
+                <span>상차</span> 01.23 (목) 10:00 <em>지</em>
+              </h2>
+              <p class="drive__info-address">
+                경기 양주시 은현면 그루고개로 332<br />그루고개로 332
+              </p>
+              <div class="drive__info-goal">
+                <ul>
+                  <li>상차지까지</li>
+                  <li>180km</li>
+                </ul>
+                <ul>
+                  <li>예상 소요시간</li>
+                  <li>1시간 59분</li>
+                </ul>
+                <ul>
+                  <li>예상 유류비</li>
+                  <li>70,000원</li>
+                </ul>
+              </div>
+            </div></swiper-slide
+          >
+          <swiper-slide
+            ><div class="drive__info">
+              <h2 class="drive__info-date">
+                <span>상차</span> 01.23 (목) 10:00 <em>지</em>
+              </h2>
+              <p class="drive__info-address">
+                경기 양주시 은현면 그루고개로 332<br />그루고개로 332
+              </p>
+              <div class="drive__info-goal">
+                <ul>
+                  <li>상차지까지</li>
+                  <li>180km</li>
+                </ul>
+                <ul>
+                  <li>예상 소요시간</li>
+                  <li>1시간 59분</li>
+                </ul>
+                <ul>
+                  <li>예상 유류비</li>
+                  <li>70,000원</li>
+                </ul>
+              </div>
+            </div></swiper-slide
+          >
+          <swiper-slide
+            ><div class="drive__info">
+              <h2 class="drive__info-date">
+                <span>상차</span> 01.23 (목) 10:00 <em>지</em>
+              </h2>
+              <p class="drive__info-address">
+                경기 양주시 은현면 그루고개로 332<br />그루고개로 332
+              </p>
+              <div class="drive__info-goal">
+                <ul>
+                  <li>상차지까지</li>
+                  <li>180km</li>
+                </ul>
+                <ul>
+                  <li>예상 소요시간</li>
+                  <li>1시간 59분</li>
+                </ul>
+                <ul>
+                  <li>예상 유류비</li>
+                  <li>70,000원</li>
+                </ul>
+              </div>
+            </div></swiper-slide
+          >
+          <swiper-slide
+            ><div class="drive__info">
+              <h2 class="drive__info-date">
+                <span>상차</span> 01.23 (목) 10:00 <em>지</em>
+              </h2>
+              <p class="drive__info-address">
+                경기 양주시 은현면 그루고개로 332<br />그루고개로 332
+              </p>
+              <div class="drive__info-goal">
+                <ul>
+                  <li>상차지까지</li>
+                  <li>180km</li>
+                </ul>
+                <ul>
+                  <li>예상 소요시간</li>
+                  <li>1시간 59분</li>
+                </ul>
+                <ul>
+                  <li>예상 유류비</li>
+                  <li>70,000원</li>
+                </ul>
+              </div>
+            </div></swiper-slide
+          >
+        </swiper-container>
       </div>
 
       <!-- choice -->
@@ -284,5 +372,13 @@
         <h2>홈</h2>
       </div>
     </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {});
+    </script>
   </body>
 </html>

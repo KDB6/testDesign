@@ -168,7 +168,7 @@ body.fixed {
 @media (max-width: 480px) {
   #section01 {
     font-family: "NotoSansKR";
-    margin-top: 10%;
+    margin-top: 11.5%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -192,6 +192,7 @@ body.fixed {
     display: flex;
     align-items: center;
     box-sizing: border-box;
+    overflow: hidden;
     width: 100%;
     padding: 0.7rem 0.7rem;
     margin-top: 4%;
@@ -209,6 +210,26 @@ body.fixed {
     font-size: 1.6rem;
     font-weight: 500;
     margin-left: 1%;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #000, #000);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    animation: slideInRight 5s linear infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  @keyframes slideInRight {
+    from {
+      transform: translate3d(100%, 0, 0);
+      visibility: inherit;
+      animation: infinite;
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  .slideInRight {
+    animation-name: slideInRight;
   }
   .drive {
     margin-top: 8%;
@@ -241,7 +262,17 @@ body.fixed {
   .drive .drive__user .drive__slide .dot:first-child {
     background: #f67c01;
   }
-  .drive .drive__info {
+  .drive swiper-container {
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .drive swiper-container swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .drive swiper-container swiper-slide .drive__info {
     color: #fff;
     background: #020018;
     border-radius: 1.5rem;
@@ -251,41 +282,41 @@ body.fixed {
     margin-top: 3%;
     line-height: 1.1;
   }
-  .drive .drive__info .drive__info-date {
+  .drive swiper-container swiper-slide .drive__info .drive__info-date {
     font-weight: 500;
     font-size: 1.9rem;
   }
-  .drive .drive__info .drive__info-date > span {
+  .drive swiper-container swiper-slide .drive__info .drive__info-date > span {
     font-size: 2rem;
     font-weight: 700;
     color: #f67c01;
     margin-right: 1%;
   }
-  .drive .drive__info .drive__info-date > em {
+  .drive swiper-container swiper-slide .drive__info .drive__info-date > em {
     font-size: 1.4rem;
     border: 1px solid #fff;
     border-radius: 0.5rem;
     padding: 0 0.2rem;
   }
-  .drive .drive__info .drive__info-address {
+  .drive swiper-container swiper-slide .drive__info .drive__info-address {
     font-size: 1.6rem;
     margin-top: 1rem;
     line-height: 1.5;
     border-bottom: 1px solid #9e9e9e;
     padding-bottom: 6%;
   }
-  .drive .drive__info .drive__info-goal > ul {
+  .drive swiper-container swiper-slide .drive__info .drive__info-goal > ul {
     display: flex;
     justify-content: space-between;
     margin: 8% 0;
   }
-  .drive .drive__info .drive__info-goal > ul > li {
+  .drive swiper-container swiper-slide .drive__info .drive__info-goal > ul > li {
     font-size: 1.6rem;
   }
-  .drive .drive__info .drive__info-goal > ul > li:first-child {
+  .drive swiper-container swiper-slide .drive__info .drive__info-goal > ul > li:first-child {
     color: #9e9e9e;
   }
-  .drive .drive__info .drive__info-goal > ul:last-child {
+  .drive swiper-container swiper-slide .drive__info .drive__info-goal > ul:last-child {
     margin: 0;
   }
   .choice {
