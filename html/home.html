@@ -13,10 +13,7 @@
     <link rel="stylesheet" href="../assets/css/home.css" />
 
     <!-- swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="../assets/css/swiper.css" />
   </head>
 
   <body>
@@ -102,10 +99,10 @@
             <h1>1월 23일 운행 예정</h1>
           </div>
           <div class="drive__slide">
+            <!-- <div class="dot active"></div>
             <div class="dot"></div>
             <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+            <div class="dot"></div> -->
           </div>
         </div>
         <swiper-container
@@ -114,7 +111,7 @@
           pagination-clickable="true"
           space-between="30"
           loop="true"
-          autocapitalize="true"
+          autocapitalize="false"
           autoplay-delay="5000"
           autoplay-disable-on-interaction="false"
         >
@@ -395,5 +392,27 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+
+    <!-- dot -->
+    <script>
+      const slider = document.querySelectorAll(".drive__info");
+      const dot = document.querySelector(".drive__slide");
+
+      let sliderLength = slider.length,
+        dotIndex = "";
+
+      function init() {
+        createDot(); //닷 버튼 생성
+      }
+      init();
+
+      function createDot() {
+        for (let i = 0; i < sliderLength; i++) {
+          dotIndex += `<div class="dot"></div>`;
+        }
+        dot.innerHTML = dotIndex;
+        dot.firstElementChild.classList.add("active");
+      }
+    </script>
   </body>
 </html>

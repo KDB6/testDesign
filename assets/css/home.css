@@ -168,10 +168,14 @@ body.fixed {
 @media (max-width: 480px) {
   #section01 {
     font-family: "NotoSansKR";
-    margin-top: 11.5%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
   }
   .header {
     display: flex;
@@ -261,11 +265,12 @@ body.fixed {
     border-radius: 3rem;
     margin: 0 0.3rem 0.4rem 0.3rem;
   }
-  .drive .drive__user .drive__slide .dot:first-child {
+  .drive .drive__user .drive__slide .dot .active {
     background: #f67c01;
   }
   .drive swiper-container {
-    width: 30rem;
+    width: 38.8vh;
+    box-sizing: border-box;
   }
   .drive swiper-container swiper-slide {
     display: flex;

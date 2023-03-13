@@ -3,10 +3,14 @@
 @media (max-width: 480px) {
   #section01 {
     font-family: $noto;
-    margin-top: 11.5%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -53%);
   }
 
   // header
@@ -115,7 +119,7 @@
           border-radius: 3rem;
           margin: 0 0.3rem 0.4rem 0.3rem;
 
-          &:first-child {
+          .active {
             background: #f67c01;
           }
         }
@@ -124,7 +128,8 @@
 
     // swiper
     swiper-container {
-      width: 30rem;
+      width: 38.8vh;
+      box-sizing: border-box;
 
       swiper-slide {
         display: flex;
