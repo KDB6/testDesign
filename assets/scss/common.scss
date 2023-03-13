@@ -141,22 +141,58 @@ body.fixed {
   margin-top: 70px !important;
 }
 
-// 변수
+// 한줄 효과
+.oneLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.twoLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.threeLine {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/* 변수 */
+// 폰트
 $noto: "NotoSansKR";
 $roboto: "Roboto";
 
-$weight: 100;
-$weight: 200;
-$weight: 300;
-$weight: 400;
-$weight: 500;
-$weight: 600;
-$weight: 700;
-$weight: 800;
-$weight: 900;
+// 폰트 크기
+$h1: 2.2rem;
+$h2: 2rem;
+$h3: 1.9rem;
+
+$b1: 1.7rem;
+$b2: 1.6rem;
+$b3: 1.4rem;
+
+$c1: 1.4rem;
+$c2: 1.3rem;
+$c3: 1.2rem;
+$c4: 1.1rem;
+
+// 폰트 웨이트
+$w400: 400;
+$w500: 500;
+$w700: 700;
 
 $black: #000;
 $white: #fff;
+$gray: #9e9e9e;
 
 // 믹스인
 @mixin footer {
