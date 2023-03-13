@@ -235,7 +235,7 @@ body.fixed {
     margin: 0 0.3rem 0.4rem 0.3rem;
   }
   .drive .drive__user .drive__slide .dot:first-child {
-    background: #ff5227;
+    background: #f67c01;
   }
   .drive .drive__info {
     color: #fff;
@@ -253,7 +253,7 @@ body.fixed {
   .drive .drive__info .drive__info-date > span {
     font-size: 1.7rem;
     font-weight: 700;
-    color: #ff5227;
+    color: #f67c01;
     margin-right: 1%;
   }
   .drive .drive__info .drive__info-date > em {
@@ -366,5 +366,112 @@ body.fixed {
     font-size: 1.2rem;
     color: #9e9e9e;
     margin-top: 3%;
+  }
+  #meun {
+    background: #020018;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8.5vh;
+    border-radius: 1.5rem 1.5rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+  }
+  #meun .meun__home {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #meun .meun__home .meun__progress {
+    width: 55%;
+    background: #f67c01;
+    height: 3.5px;
+    border-radius: 1rem;
+    margin-bottom: 10%;
+  }
+  #meun .meun__home h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #f67c01;
+    font-family: "NotoSansKR";
+    margin-top: 3%;
+    margin-bottom: 10%;
+  }
+  #meun .meun__cargo {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #meun .meun__cargo .meun__progress {
+    width: 55%;
+    background: inherit;
+    height: 3.5px;
+    border-radius: 1rem;
+    margin-bottom: 10%;
+  }
+  #meun .meun__cargo h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #9e9e9e;
+    font-family: "NotoSansKR";
+    margin-top: 3%;
+    margin-bottom: 10%;
+  }
+  #meun .meun__run {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #meun .meun__run .meun__progress {
+    width: 55%;
+    background: inherit;
+    height: 3.5px;
+    border-radius: 1rem;
+    margin-bottom: 10%;
+  }
+  #meun .meun__run h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #9e9e9e;
+    font-family: "NotoSansKR";
+    margin-top: 3%;
+    margin-bottom: 10%;
+  }
+  #meun .meun__more {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #meun .meun__more .meun__progress {
+    width: 55%;
+    background: inherit;
+    height: 3.5px;
+    border-radius: 1rem;
+    margin-bottom: 10%;
+  }
+  #meun .meun__more h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #9e9e9e;
+    font-family: "NotoSansKR";
+    margin-top: 3%;
+    margin-bottom: 10%;
   }
 }
