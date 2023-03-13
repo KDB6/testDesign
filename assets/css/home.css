@@ -185,17 +185,18 @@ body.fixed {
     height: 2.4rem;
   }
   .notice {
+    background: #fff;
     display: flex;
     align-items: center;
-    background: #fff;
+    box-sizing: border-box;
     width: 100%;
+    padding: 0.7rem 0.7rem;
     margin-top: 3%;
-    padding: 1rem 0;
+    border-radius: 0.8rem;
   }
   .notice .notice__icon {
     width: 2rem;
     height: 2rem;
-    margin-right: 0.5rem;
   }
   .notice .notice__icon > svg {
     width: 2rem;
