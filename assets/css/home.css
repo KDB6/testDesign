@@ -66,7 +66,7 @@
 
 body {
   overflow: overlay;
-  background: #f9f9fa;
+  background: #f1f1f5;
 }
 
 /* fixed */
@@ -228,8 +228,8 @@ body.fixed {
     display: flex;
   }
   .drive .drive__user .drive__slide .dot {
-    width: 0.5rem;
-    height: 0.5rem;
+    width: 0.7rem;
+    height: 0.7rem;
     background: #9e9e9e;
     border-radius: 3rem;
     margin: 0 0.3rem 0.4rem 0.3rem;
@@ -282,5 +282,89 @@ body.fixed {
   }
   .drive .drive__info .drive__info-goal > ul:last-child {
     margin: 0;
+  }
+  .choice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 7%;
+  }
+  .choice .choice__card-cargo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 29%;
+    background: #fff;
+    padding: 2.5rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .choice .choice__card-cargo > svg {
+    background: #f1f1f5;
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .choice .choice__card-cargo > h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 13%;
+  }
+  .choice .choice__card-cargo > p {
+    font-size: 1.2rem;
+    color: #9e9e9e;
+    margin-top: 3%;
+  }
+  .choice .choice__card-sur {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 29%;
+    background: #fff;
+    padding: 2.5rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .choice .choice__card-sur > svg {
+    background: #f1f1f5;
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .choice .choice__card-sur > h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 13%;
+  }
+  .choice .choice__card-sur > p {
+    font-size: 1.2rem;
+    color: #9e9e9e;
+    margin-top: 3%;
+  }
+  .choice .choice__card-custom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 29%;
+    background: #fff;
+    padding: 2.5rem 0.5rem;
+    border-radius: 1rem;
+  }
+  .choice .choice__card-custom > svg {
+    background: #f1f1f5;
+    width: 3.6rem;
+    height: 3.6rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .choice .choice__card-custom > h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-top: 13%;
+  }
+  .choice .choice__card-custom > p {
+    font-size: 1.2rem;
+    color: #9e9e9e;
+    margin-top: 3%;
   }
 }
