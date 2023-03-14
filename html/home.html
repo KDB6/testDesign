@@ -96,7 +96,7 @@
         <div class="drive__user">
           <div class="drive__peo">
             <h2><span>김로지</span> 님의</h2>
-            <h1>1월 23일 운행 예정</h1>
+            <div class="drive__peo-sit"></div>
           </div>
           <div class="drive__slide">
             <!-- <div class="dot active"></div>
@@ -411,13 +411,16 @@
     <script>
       const slider = document.querySelectorAll(".drive__info");
       const dot = document.querySelector(".drive__slide");
+      const driveProText = document.querySelector(".drive__peo-sit");
 
       let sliderLength = slider.length,
         dotIndex = "";
+      drivePeoIndex = "";
       currentIndex = 0;
 
       function init() {
         createDot(); //닷 버튼 생성
+        drivePeo();
       }
       init();
 
@@ -441,6 +444,26 @@
           dotActive.forEach((el) => el.classList.remove("active"));
           dotActive[0].classList.add("active");
         }
+      }
+
+      let text = ["1월 23일 운행 예정", "월별 수주 건 수", "땡떙땡", "땡떙땡"];
+      let index = 0;
+
+      function changeText() {
+        document.querySelector(".drive__peo-sit").innerText = text[index];
+        index = (index + 1) % 4;
+      }
+
+      let interval = window.setInterval(changeText, 1000);
+      window.onunload = function () {
+        window.clearInterval(interval);
+      };
+
+      function drivePeo() {
+        for (i = 0; i < sliderLength; i++) {
+          drivePeoIndex += `${text[i]}`;
+        }
+        driveProText.innerHTML = drivePeoIndex;
       }
     </script>
   </body>

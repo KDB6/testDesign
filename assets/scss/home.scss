@@ -105,10 +105,12 @@
           letter-spacing: -0.02em;
         }
 
-        > h1 {
-          font-size: $h2;
-          font-weight: $w700;
-          letter-spacing: -0.05em;
+        .drive__peo-sit {
+          > h1 {
+            font-size: $h2;
+            font-weight: $w700;
+            letter-spacing: -0.05em;
+          }
         }
       }
 
