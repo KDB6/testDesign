@@ -394,6 +394,8 @@
     <script
       src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
     >
+      pagination.style.display = "none";
+
       const $slides = document.querySelectorAll('swiper-container');
       for (let i of $slides) {
         i.addEventListener('mouseover', function(){
@@ -425,10 +427,6 @@
         dot.innerHTML = dotIndex;
         dot.firstElementChild.classList.add("active");
       }
-    </script>
-
-    <script>
-      pagination.style.display = "none";
     </script>
   </body>
 </html>
