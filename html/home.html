@@ -454,14 +454,14 @@
         index = (index + 1) % 4;
       }
 
-      let interval = window.setInterval(changeText, 1000);
+      let interval = window.setInterval(changeText, 5200);
       window.onunload = function () {
         window.clearInterval(interval);
       };
 
       function drivePeo() {
         for (i = 0; i < sliderLength; i++) {
-          drivePeoIndex += `${text[i]}`;
+          drivePeoIndex += `<h1>${text}</h1>`;
         }
         driveProText.innerHTML = drivePeoIndex;
       }
