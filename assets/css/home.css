@@ -66,7 +66,7 @@
 
 body {
   overflow: overlay;
-  background: #f1f1f5;
+  background: #f2f4f6;
 }
 
 /* fixed */
@@ -185,7 +185,7 @@ body.fixed {
   .header .header__text {
     font-size: 2.2rem;
     font-weight: 700;
-    color: #9e9e9e;
+    color: #858c92;
   }
   .header .header__icon {
     width: 2.4rem;
@@ -219,6 +219,7 @@ body.fixed {
     font-size: 0px;
   }
   .notice .marquee-container .marquee-overflow .notice__text {
+    color: #121212;
     font-size: 1.4rem;
     display: inline-block;
     animation: marquee 10s linear infinite running;
@@ -239,6 +240,7 @@ body.fixed {
   }
   .drive {
     margin-top: 8%;
+    width: 100%;
   }
   .drive .drive__user {
     display: flex;
@@ -261,15 +263,14 @@ body.fixed {
   .drive .drive__user .drive__slide .dot {
     width: 0.7rem;
     height: 0.7rem;
-    background: #9e9e9e;
+    background: #858c92;
     border-radius: 3rem;
     margin: 0 0.3rem 0.4rem 0.3rem;
   }
   .drive .drive__user .drive__slide .dot .active {
-    background: #f67c01;
+    background: #ff7300;
   }
   .drive swiper-container {
-    width: 38.8vh;
     box-sizing: border-box;
   }
   .drive swiper-container swiper-slide {
@@ -279,7 +280,7 @@ body.fixed {
   }
   .drive swiper-container swiper-slide .drive__info {
     color: #fff;
-    background: #020018;
+    background: #0d3c6f;
     border-radius: 1.5rem;
     box-sizing: border-box;
     width: 100%;
@@ -294,7 +295,7 @@ body.fixed {
   .drive swiper-container swiper-slide .drive__info .drive__info-date > span {
     font-size: 2rem;
     font-weight: 700;
-    color: #f67c01;
+    color: #ff7300;
     margin-right: 1%;
   }
   .drive swiper-container swiper-slide .drive__info .drive__info-date > em {
@@ -307,7 +308,7 @@ body.fixed {
     font-size: 1.6rem;
     margin-top: 1rem;
     line-height: 1.5;
-    border-bottom: 1px solid #9e9e9e;
+    border-bottom: 1px solid #858c92;
     padding-bottom: 6%;
   }
   .drive swiper-container swiper-slide .drive__info .drive__info-goal > ul {
@@ -319,7 +320,7 @@ body.fixed {
     font-size: 1.6rem;
   }
   .drive swiper-container swiper-slide .drive__info .drive__info-goal > ul > li:first-child {
-    color: #9e9e9e;
+    color: #858c92;
   }
   .drive swiper-container swiper-slide .drive__info .drive__info-goal > ul:last-child {
     margin: 0;
@@ -352,7 +353,7 @@ body.fixed {
   }
   .choice .choice__card-cargo > p {
     font-size: 1.2rem;
-    color: #9e9e9e;
+    color: #858c92;
     margin-top: 3%;
   }
   .choice .choice__card-sur {
@@ -378,7 +379,7 @@ body.fixed {
   }
   .choice .choice__card-sur > p {
     font-size: 1.2rem;
-    color: #9e9e9e;
+    color: #858c92;
     margin-top: 3%;
   }
   .choice .choice__card-custom {
@@ -404,11 +405,11 @@ body.fixed {
   }
   .choice .choice__card-custom > p {
     font-size: 1.2rem;
-    color: #9e9e9e;
+    color: #858c92;
     margin-top: 3%;
   }
   #meun {
-    background: #020018;
+    background: #002550;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -432,7 +433,7 @@ body.fixed {
   }
   #meun .meun__home .meun__progress {
     width: 55%;
-    background: #f67c01;
+    background: #ff7300;
     height: 3.5px;
     border-radius: 1rem;
     margin-bottom: 10%;
@@ -440,7 +441,7 @@ body.fixed {
   #meun .meun__home h2 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #f67c01;
+    color: #ff7300;
     font-family: "NotoSansKR";
     margin-top: 3%;
     margin-bottom: 10%;
