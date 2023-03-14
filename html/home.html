@@ -391,7 +391,19 @@
     </footer>
 
     <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
+    >
+      const $slides = document.querySelectorAll('swiper-container');
+      for (let i of $slides) {
+        i.addEventListener('mouseover', function(){
+          swiper.autoplay.stop();
+        });
+        i.addEventListener('mouseout', function(){
+          swiper.autoplay.start();
+        });
+      }
+    </script>
 
     <!-- dot -->
     <script>
