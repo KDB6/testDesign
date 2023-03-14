@@ -219,8 +219,9 @@ body.fixed {
     font-size: 0px;
   }
   .notice .marquee-container .marquee-overflow .notice__text {
-    color: #121212;
     font-size: 1.4rem;
+    font-weight: 500;
+    color: #121212;
     display: inline-block;
     animation: marquee 10s linear infinite running;
     transform: translate(0%);

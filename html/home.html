@@ -427,6 +427,25 @@
         dot.innerHTML = dotIndex;
         dot.firstElementChild.classList.add("active");
       }
+
+      function gotoSlider(index) {
+        sliderInner.classList.add("transition");
+        let poInitial = sliderInner.offsetLeft; // -800
+
+        sliderInner.style.left = -sliderWidth * (index + 1) + "px";
+
+        currentIndex = index;
+
+        if (currentIndex <= 4) {
+          let dotActive = document.querySelectorAll(".slider__dot .dot");
+          dotActive.forEach((el) => el.classList.remove("active"));
+          dotActive[index].classList.add("active");
+        } else {
+          let dotActive = document.querySelectorAll(".slider__dot .dot");
+          dotActive.forEach((el) => el.classList.remove("active"));
+          dotActive[0].classList.add("active");
+        }
+      }
     </script>
   </body>
 </html>

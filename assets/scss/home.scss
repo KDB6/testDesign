@@ -62,8 +62,9 @@
         font-size: 0px;
 
         .notice__text {
-          color: #121212;
           font-size: $c1;
+          font-weight: $w500;
+          color: #121212;
           display: inline-block;
           animation: marquee 10s linear infinite running;
           transform: translate(0%);
