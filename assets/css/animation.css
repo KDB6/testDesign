@@ -281,6 +281,12 @@ body.fixed {
     bottom: 0;
     left: 70%;
   }
+  .number {
+    text-align: center;
+    font-size: 3rem;
+    color: #5964ff;
+    font-weight: 700;
+  }
 }
 .fade-in {
   --from-opacity: 0;
