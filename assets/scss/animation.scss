@@ -1,0 +1,121 @@
+@import "common.scss";
+
+@media (max-width: 480px) {
+  #animation {
+    font-family: $noto;
+  }
+  .card {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .card1 {
+      width: 80%;
+      height: 10vh;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > h2 {
+        font-weight: $w700;
+        font-size: 1.6rem;
+        text-align: center;
+        color: #3f53ff;
+      }
+    }
+    .card2 {
+      width: 80%;
+      height: 10vh;
+      margin-top: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+
+      > h2 {
+        font-weight: $w700;
+        font-size: 1.6rem;
+        text-align: center;
+        color: #3f53ff;
+      }
+    }
+    .card3 {
+      width: 80%;
+      height: 10vh;
+      margin-top: 5%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+
+      > h2 {
+        font-weight: $w700;
+        font-size: 1.6rem;
+        text-align: center;
+        color: #3f53ff;
+      }
+    }
+  }
+
+  .fade-in {
+    --from-opacity: 0;
+  }
+
+  .from-top {
+    --from-y: -100%;
+  }
+  .from-left {
+    --from-x: -100%;
+  }
+  .from-right {
+    --from-x: 100%;
+  }
+  .from-bottom {
+    --from-y: 100vh;
+  }
+
+  .move {
+    animation: move-in 1.5s ease-in-out infinite;
+    --from-x: -100%;
+    --from-y: 0;
+    --from-opacity: 0;
+    color: #000;
+  }
+  .move-color {
+    animation: move-color;
+  }
+}
+@keyframes move-in {
+  0% {
+    transform: translate(var(--from-x), var(--from-y));
+    opacity: var(--from-opacity);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes move-color {
+  0% {
+    color: #3f53ff;
+  }
+  100% {
+    color: #000;
+  }
+}
+
+@keyframes move-out {
+  0% {
+    transform: translate(var(--from-x), var(--from-y));
+    opacity: var(--from-opacity);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}

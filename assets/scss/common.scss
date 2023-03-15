@@ -166,6 +166,29 @@ body.fixed {
   -webkit-box-orient: vertical;
 }
 
+// 변수
+:root {
+  // font
+  --font-kr: "NotoSansKR";
+  --font-eng: "Roboto";
+  --font-w100: 100;
+  --font-w200: 200;
+  --font-w300: 300;
+  --font-w400: 400;
+  --font-w500: 500;
+  --font-w600: 600;
+  --font-w700: 700;
+  --font-w800: 800;
+  --font-w900: 900;
+
+  // line-height
+  --lh1: 1;
+
+  // color
+  --black: #000;
+  --white: #fff;
+}
+
 /* 변수 */
 // 폰트
 $noto: "NotoSansKR";

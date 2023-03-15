@@ -164,6 +164,23 @@ body.fixed {
   -webkit-box-orient: vertical;
 }
 
+:root {
+  --font-kr: "NotoSansKR";
+  --font-eng: "Roboto";
+  --font-w100: 100;
+  --font-w200: 200;
+  --font-w300: 300;
+  --font-w400: 400;
+  --font-w500: 500;
+  --font-w600: 600;
+  --font-w700: 700;
+  --font-w800: 800;
+  --font-w900: 900;
+  --lh1: 1;
+  --black: #000;
+  --white: #fff;
+}
+
 /* 변수 */
 @media (max-width: 480px) {
   #section01 {
