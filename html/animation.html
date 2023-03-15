@@ -14,21 +14,41 @@
   </head>
   <body>
     <section id="animation" class="container">
-      <div class="card">
-        <div class="card1 move from-left fade-in">
-          <h2 class="move-color">CARD</h2>
+      <!-- card -->
+      <article id="card">
+        <div class="card">
+          <div class="card1 move from-left fade-in">
+            <h2 class="move-color">CARD</h2>
+          </div>
+          <div class="card2">
+            <h2>CARD</h2>
+          </div>
+          <div class="card3">
+            <h2>CARD</h2>
+          </div>
         </div>
-        <div class="card2">
-          <h2>CARD</h2>
+      </article>
+
+      <!-- graph -->
+      <article id="graph">
+        <div class="graph">
+          <div class="bar1 graph-ani"></div>
+          <div class="bar2 graph-ani"></div>
+          <div class="bar3 graph-ani"></div>
+          <div class="bar4 graph-ani"></div>
         </div>
-        <div class="card3">
-          <h2>CARD</h2>
-        </div>
-      </div>
-      <div class="graph"></div>
-      <div class="number"></div>
+      </article>
+
+      <!-- number -->
+      <article>
+        <div class="number"></div>
+      </article>
     </section>
 
-    <script></script>
+    <script>
+      const card1 = document.querySelector(".card1");
+      const card2 = document.querySelector(".card2");
+      const card3 = document.querySelector(".card3");
+    </script>
   </body>
 </html>

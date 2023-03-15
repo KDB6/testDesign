@@ -238,32 +238,82 @@ body.fixed {
     text-align: center;
     color: #3f53ff;
   }
-  .fade-in {
-    --from-opacity: 0;
+  .graph {
+    height: 40vh;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
   }
-  .from-top {
-    --from-y: -100%;
+  .graph .bar1 {
+    width: 3rem;
+    height: 10rem;
+    background: #5964ff;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 25%;
   }
-  .from-left {
-    --from-x: -100%;
+  .graph .bar2 {
+    width: 3rem;
+    height: 20rem;
+    background: #5964ff;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 40%;
   }
-  .from-right {
-    --from-x: 100%;
+  .graph .bar3 {
+    width: 3rem;
+    height: 15rem;
+    background: #5964ff;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 55%;
   }
-  .from-bottom {
-    --from-y: 100vh;
-  }
-  .move {
-    animation: move-in 1.5s ease-in-out infinite;
-    --from-x: -100%;
-    --from-y: 0;
-    --from-opacity: 0;
-    color: #000;
-  }
-  .move-color {
-    animation: move-color;
+  .graph .bar4 {
+    width: 3rem;
+    height: 18rem;
+    background: #5964ff;
+    position: absolute;
+    border-radius: 5px 5px 0 0;
+    bottom: 0;
+    left: 70%;
   }
 }
+.fade-in {
+  --from-opacity: 0;
+}
+
+.from-top {
+  --from-y: -100%;
+}
+
+.from-left {
+  --from-x: -100%;
+}
+
+.from-right {
+  --from-x: 100%;
+}
+
+.from-bottom {
+  --from-y: 100vh;
+}
+
+.move {
+  animation: move-in 1.5s ease-in-out;
+  --from-x: -100%;
+  --from-y: 0;
+  --from-opacity: 0;
+  color: #000;
+}
+
+.move-color {
+  animation: move-color;
+}
+
 @keyframes move-in {
   0% {
     transform: translate(var(--from-x), var(--from-y));
@@ -274,21 +324,15 @@ body.fixed {
     opacity: 1;
   }
 }
-@keyframes move-color {
-  0% {
-    color: #3f53ff;
-  }
-  100% {
-    color: #000;
-  }
+.graph-ani {
+  animation: graph-ani 1s ease-in-out;
 }
-@keyframes move-out {
+
+@keyframes graph-ani {
   0% {
-    transform: translate(var(--from-x), var(--from-y));
-    opacity: var(--from-opacity);
+    height: 0%;
   }
   100% {
-    transform: translate(0, 0);
-    opacity: 1;
+    visibility: visible;
   }
 }
