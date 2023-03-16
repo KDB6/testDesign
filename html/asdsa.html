@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #card-container {
+        position: relative; /* 위치 지정 기준 설정 */
+        height: 300px;
+        overflow: hidden;
+        margin-top: 32px; /* 카드들과의 간격 */
+      }
+
+      .card {
+        position: absolute; /* 위치를 고정 */
+        left: 0;
+        width: 100%;
+        padding: 16px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 16px; /* 카드 사이에 간격을 줌 */
+        transition: top 0.5s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="card-container"></div>
+
+    <script>
+      var cardContainer = document.getElementById("card-container");
+      var topOffset = 0; // 새로운 카드가 추가될 때마다 top 위치를 변경하기 위한 변수
+
+      // 카드를 생성하는 함수
+      function createCard() {
+        // Create a new card element
+        var newCard = document.createElement("div");
+        newCard.classList.add("card");
+        newCard.textContent = "New Card";
+
+        // 순차적으로 기존 카드들의 위치를 변경
+        var cards = cardContainer.querySelectorAll(".card");
+        for (var i = 0; i < cards.length; i++) {
+          var card = cards[i];
+          var currentTop = parseInt(card.style.top) || 0; // top 값이 없으면 0으로 설정
+          var newTop = currentTop + newCard.offsetHeight + 5; // 새로 추가한 카드의 높이 + 간격 만큼 이동할 위치 계산
+          card.style.top = newTop + "rem"; // 위치 변경
+        }
+
+        // Add the new card to the container
+        cardContainer.appendChild(newCard);
+
+        // Set the top position of the new card
+        newCard.style.top = "0";
+        topOffset += newCard.offsetHeight + 16; // 새로 추가한 카드의 높이 + 간격 만큼 top 위치를 증가
+
+        // Update the height of the container
+        cardContainer.style.height = topOffset + "px";
+      }
+
+      // 5초마다 createCard 함수를 호출하여 새로운 카드를 추가
+      setInterval(function () {
+        createCard();
+      }, 1000);
+    </script>
+  </body>
+</html>
