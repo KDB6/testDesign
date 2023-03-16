@@ -5,59 +5,132 @@
     font-family: $noto;
   }
 
+  .slide-container {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300%;
+  }
+
+  .slide-item {
+    height: 100%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    font-size: 24px;
+    text-align: center;
+  }
+
   .card {
     width: 100%;
     height: 50vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    position: relative;
 
-    .card1 {
-      width: 80%;
-      height: 10vh;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    .card__new {
       display: flex;
-      align-items: center;
       justify-content: center;
+      width: 100%;
+      position: absolute;
+      top: 1.8rem;
 
-      > h2 {
-        font-weight: $w700;
-        font-size: 1.6rem;
-        text-align: center;
-        color: #3f53ff;
+      .card1 {
+        width: 80%;
+        height: 10vh;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+
+        > h2 {
+          font-weight: $w700;
+          font-size: 1.6rem;
+          text-align: center;
+          color: #555555;
+        }
       }
     }
-    .card2 {
-      width: 80%;
-      height: 10vh;
-      margin-top: 5%;
+    .card__existing {
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      align-items: center;
+      width: 100%;
 
-      > h2 {
-        font-weight: $w700;
-        font-size: 1.6rem;
-        text-align: center;
-        color: #3f53ff;
+      .card2 {
+        width: 80%;
+        height: 10vh;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+
+        > h2 {
+          font-weight: $w700;
+          font-size: 1.6rem;
+          text-align: center;
+          color: #555555;
+        }
       }
-    }
-    .card3 {
-      width: 80%;
-      height: 10vh;
-      margin-top: 5%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+      .card3 {
+        width: 80%;
+        height: 10vh;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 
-      > h2 {
-        font-weight: $w700;
-        font-size: 1.6rem;
-        text-align: center;
-        color: #3f53ff;
+        > h2 {
+          font-weight: $w700;
+          font-size: 1.6rem;
+          text-align: center;
+          color: #555555;
+        }
+      }
+      .card4 {
+        width: 80%;
+        height: 10vh;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+
+        > h2 {
+          font-weight: $w700;
+          font-size: 1.6rem;
+          text-align: center;
+          color: #555555;
+        }
+      }
+      .card5 {
+        width: 80%;
+        height: 10vh;
+        margin-top: 5%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+
+        > h2 {
+          font-weight: $w700;
+          font-size: 1.6rem;
+          text-align: center;
+          color: #555555;
+        }
       }
     }
   }
@@ -162,7 +235,7 @@
 
 // graph
 .graph-ani {
-  animation: graph-ani 1s ease-in-out;
+  animation: graph-ani 1s ease-in-out infinite;
 }
 
 @keyframes graph-ani {

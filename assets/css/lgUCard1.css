@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* 스킵 메뉴 */
 #skip {
   position: relative;
@@ -141,7 +140,6 @@ body.fixed {
   margin-top: 70px !important;
 }
 
-// 한줄 효과
 .oneLine {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -166,9 +164,7 @@ body.fixed {
   -webkit-box-orient: vertical;
 }
 
-// 변수
 :root {
-  // font
   --font-kr: "NotoSansKR";
   --font-eng: "Roboto";
   --font-w100: 100;
@@ -180,50 +176,31 @@ body.fixed {
   --font-w700: 700;
   --font-w800: 800;
   --font-w900: 900;
-
-  // line-height
   --lh1: 1;
-
-  // color
   --black: #000;
   --white: #fff;
 }
 
 /* 변수 */
-// 폰트
-$noto: "NotoSansKR";
-$roboto: "Roboto";
-
-// 폰트 크기
-$h1: 2.2rem;
-$h2: 2rem;
-$h3: 1.9rem;
-
-$b1: 1.7rem;
-$b2: 1.6rem;
-$b3: 1.4rem;
-
-$c1: 1.4rem;
-$c2: 1.3rem;
-$c3: 1.2rem;
-$c4: 1.1rem;
-
-// 폰트 웨이트
-$w400: 400;
-$w500: 500;
-$w700: 700;
-
-$black: #000;
-$black2: #212121;
-$white: #fff;
-$gray: #858c92;
-$blue: #0d3c6f;
-$navy: #002550;
-$orange: #ff7300;
-
-// 믹스인
-@mixin footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@media (max-width: 480px) {
+  #section1 {
+    height: 70vh;
+    font-family: "NotoSansKR";
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    padding-top: 2%;
+  }
+  #section1 .card {
+    background: #fff;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 5%;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+  }
 }
