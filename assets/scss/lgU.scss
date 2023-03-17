@@ -281,6 +281,40 @@
           }
         }
 
+        // car__info
+        .car__info {
+          color: $black2;
+          background: $white;
+          border-radius: 1.5rem;
+          box-sizing: border-box;
+          width: 100%;
+          padding: 2.5rem 2rem;
+          margin-top: 3%;
+          line-height: 1.1;
+          box-shadow: 7px 7px 7px 1px #00000005;
+          height: 36vh;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+        }
+
+        // promotion__info
+        .promotion__info {
+          color: $black2;
+          background: $white;
+          border-radius: 1.5rem;
+          box-sizing: border-box;
+          width: 100%;
+          padding: 2.5rem 2rem;
+          margin-top: 3%;
+          line-height: 1.1;
+          box-shadow: 7px 7px 7px 1px #00000005;
+          height: 36vh;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: column;
+        }
+
         // card__info
         .card__info {
           color: $black2;

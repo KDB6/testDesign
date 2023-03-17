@@ -415,6 +415,36 @@ body.fixed {
     background: #535353;
     border-radius: 5px 5px 0 0;
   }
+  .drive swiper-container swiper-slide .car__info {
+    color: #212121;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    margin-top: 3%;
+    line-height: 1.1;
+    box-shadow: 7px 7px 7px 1px rgba(0, 0, 0, 0.0196078431);
+    height: 36vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+  .drive swiper-container swiper-slide .promotion__info {
+    color: #212121;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2.5rem 2rem;
+    margin-top: 3%;
+    line-height: 1.1;
+    box-shadow: 7px 7px 7px 1px rgba(0, 0, 0, 0.0196078431);
+    height: 36vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
   .drive swiper-container swiper-slide .card__info {
     color: #212121;
     background: #fff;

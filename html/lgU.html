@@ -128,7 +128,7 @@
 
               <!-- drive__info3 -->
               <swiper-slide>
-                <div class="drive__info">
+                <div class="car__info">
                   <!-- <h2 class="drive__info-date">
                     <span>상차</span> 01.23 (목) 10:00 <em>지</em>
                   </h2>
@@ -154,7 +154,7 @@
 
               <!-- drive__info4 -->
               <swiper-slide>
-                <div class="graph__info">
+                <div class="promotion__info">
                   <!-- <div class="graph">
                     <div class="bar1 graph-ani"></div>
                     <div class="bar2 graph-ani"></div>
@@ -209,25 +209,55 @@
         <script>
           const driveInfo = document.querySelector(".drive__info");
           const graphInfo = document.querySelector(".graph__info");
+          const carInfo = document.querySelector(".car__info");
+          const PromotionInfo = document.querySelector(".promotion__info");
 
           driveInfo.addEventListener("touchstart", () => {
             driveInfo.style.background = "#cecece";
             driveInfo.style.transition = "all 0.3s";
+            driveInfo.style.zIndex = "-5";
           });
 
           driveInfo.addEventListener("touchend", () => {
             driveInfo.style.background = "#fff";
             driveInfo.style.transition = "all 0.3s";
+            driveInfo.style.zIndex = "-5";
           });
 
           graphInfo.addEventListener("touchstart", () => {
-            driveInfo.style.background = "#cecece";
-            driveInfo.style.transition = "all 0.3s";
+            graphInfo.style.background = "#cecece";
+            graphInfo.style.transition = "all 0.3s";
+            graphInfo.style.zIndex = "-5";
           });
 
           graphInfo.addEventListener("touchend", () => {
-            driveInfo.style.background = "#fff";
-            driveInfo.style.transition = "all 0.3s";
+            graphInfo.style.background = "#fff";
+            graphInfo.style.transition = "all 0.3s";
+            graphInfo.style.zIndex = "-5";
+          });
+
+          carInfo.addEventListener("touchstart", () => {
+            carInfo.style.background = "#cecece";
+            carInfo.style.transition = "all 0.3s";
+            carInfo.style.zIndex = "-5";
+          });
+
+          carInfo.addEventListener("touchend", () => {
+            carInfo.style.background = "#fff";
+            carInfo.style.transition = "all 0.3s";
+            carInfo.style.zIndex = "-5";
+          });
+
+          PromotionInfo.addEventListener("touchstart", () => {
+            PromotionInfo.style.background = "#cecece";
+            PromotionInfo.style.transition = "all 0.3s";
+            PromotionInfo.style.zIndex = "-5";
+          });
+
+          PromotionInfo.addEventListener("touchend", () => {
+            PromotionInfo.style.background = "#fff";
+            PromotionInfo.style.transition = "all 0.3s";
+            PromotionInfo.style.zIndex = "-5";
           });
         </script>
       </body>
