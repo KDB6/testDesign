@@ -21,7 +21,24 @@
       let cards = [];
       let cardContainer = document.getElementById("card-container");
       let topOffset = 0;
-      let cardLimit = 10;
+      let cardLimit = 50;
+      let progressIndex = "";
+
+      const card = document.querySelector(".card");
+
+      function createPro() {
+        for (let i = 0; i < cards.length; i++) {
+          if (i % 2 !== 0) {
+            progressIndex += `<div class="progress"></div>`;
+          }
+          card.innerHTML = progressIndex;
+        }
+      }
+
+      function init() {
+        createPro();
+      }
+      init();
 
       function createCard() {
         let newCard = document.createElement("div");
@@ -66,11 +83,22 @@
           topOffset -= oldCard.offsetHeight + 16; // 삭제한 카드의 높이 + 간격 만큼 top 위치를 감소
           cardContainer.style.height = topOffset + "px"; // 컨테이너의 높이 변경
         }
+
+        // move card down
+        if (card.dataset.id == newCard.dataset.id - 3) {
+          // update data-id attribute
+          card.dataset.id = newCard.dataset.id;
+          // update class name
+          if (card.dataset.id % 2 !== 0) {
+            card.classList.add("odd");
+            card.classList.remove("even");
+          }
+        }
       }
 
       setInterval(function () {
         createCard();
-      }, 2000);
+      }, 1500);
     </script>
   </body>
 </html>

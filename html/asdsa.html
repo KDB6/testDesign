@@ -6,66 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <link rel="stylesheet" href="../assets/css/common.css" />
+    <link rel="stylesheet" href="../assets/css/font.css" />
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+
     <style>
-      /* CSS */
-      .swiper-slide {
-        height: 300px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .card {
+        position: absolute; /* 위치를 고정 */
+        left: 0;
+        width: 100%;
+        height: 10rem;
+        background: gray;
+        border-radius: 1rem;
+        margin-bottom: 5%;
+        transition: top 0.5s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
+        overflow: hidden;
+        width: 300px;
       }
 
-      h1,
-      p {
-        margin: 0;
+      .progress {
+        width: 3%;
+        height: 100%;
+        background: #ff7171;
       }
     </style>
   </head>
   <body>
-    <div class="swiper-container">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <h1>Slide 1</h1>
-          <p>Slide 1 Content</p>
-        </div>
-        <div class="swiper-slide">
-          <h1>Slide 2</h1>
-          <p>Slide 2 Content</p>
-        </div>
-        <div class="swiper-slide">
-          <h1>Slide 3</h1>
-          <p>Slide 3 Content</p>
-        </div>
-      </div>
-      <div class="swiper-pagination"></div>
+    <div class="card">
+      <div class="progress"></div>
     </div>
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-    <script>
-      // JavaScript
-      var swiper = new Swiper(".swiper-container", {
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        on: {
-          slideChange: function () {
-            var activeSlide = document.querySelector(".swiper-slide-active");
-            var heading = activeSlide.querySelector("h1");
-            var content = activeSlide.querySelector("p");
-            console.log("Slide changed!");
-
-            // change text here
-            // 예를 들어, 슬라이드 내의 h1 요소를 변경하고자 한다면:
-            heading.textContent = "New Heading";
-          },
-        },
-      });
-    </script>
   </body>
 </html>
