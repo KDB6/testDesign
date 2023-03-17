@@ -470,7 +470,7 @@ body.fixed {
     height: 100%;
   }
   .graph-ani {
-    animation: graph-ani 1.3s ease-out;
+    animation: graph-ani 1s ease-out;
   }
   @keyframes graph-ani {
     0% {

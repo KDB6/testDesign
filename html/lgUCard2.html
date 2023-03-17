@@ -21,24 +21,7 @@
       let cards = [];
       let cardContainer = document.getElementById("card-container");
       let topOffset = 0;
-      let cardLimit = 50;
-      let progressIndex = "";
-
-      const card = document.querySelector(".card");
-
-      function createPro() {
-        for (let i = 0; i < cards.length; i++) {
-          if (i % 2 !== 0) {
-            progressIndex += `<div class="progress"></div>`;
-          }
-          card.innerHTML = progressIndex;
-        }
-      }
-
-      function init() {
-        createPro();
-      }
-      init();
+      let cardLimit = 500;
 
       function createCard() {
         let newCard = document.createElement("div");
@@ -49,9 +32,7 @@
           let lastTwoCards = cards.slice(-2);
           lastTwoCards.forEach((card) => {
             card.classList.remove("highlight");
-            setTimeout(() => {
-              card.style.backgroundColor = "";
-            }, 500);
+            card.style.backgroundColor = "";
           });
         }
         cards.push(newCard);
@@ -92,6 +73,9 @@
           if (card.dataset.id % 2 !== 0) {
             card.classList.add("odd");
             card.classList.remove("even");
+          } else {
+            card.classList.add("even");
+            card.classList.remove("odd");
           }
         }
       }
