@@ -25,7 +25,7 @@
       background: #a0a0a0;
       border-radius: 0.8rem;
       margin-bottom: 5%;
-      transition: top 0.5s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
+      transition: top 0.7s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
       overflow: hidden;
     }
 
@@ -36,15 +36,15 @@
     }
 
     .card:nth-child(odd) {
-      border-left: 0.8rem solid #0a0331;
+      border-left: 0.8rem solid #696969;
       box-sizing: border-box;
     }
     .highlight {
-      background: #6e6e6e;
+      background: #2c2c2c;
     }
 
     .move {
-      animation: moveY 0.5s ease-in-out;
+      animation: moveY 0.6s ease-in-out;
     }
   }
 
