@@ -190,7 +190,6 @@ body.fixed {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* 홀수번째 카드에 대한 스타일 */
   }
   #section1 #card-container {
     position: relative; /* 위치 지정 기준 설정 */
@@ -205,12 +204,12 @@ body.fixed {
     width: 100%;
     height: 10rem;
     background: #858c92;
-    border-radius: 1.5rem;
+    border-radius: 1rem;
     margin-bottom: 5%;
     transition: top 0.5s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
   }
-  #section1 .cardBand {
-    border: 2px solid blue;
+  #section1 .highlight {
+    background: #bfc5ff;
   }
   #section1 .move {
     animation: moveY 0.5s ease-in-out;

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../assets/css/font.css" />
     <link rel="stylesheet" href="../assets/css/reset.css" />
 
-    <link rel="stylesheet" href="../assets/css/lgUCard1.css" />
+    <link rel="stylesheet" href="../assets/css/lgUCard2.css" />
   </head>
   <body>
     <section id="section1" class="container">
@@ -18,21 +18,33 @@
     </section>
 
     <script>
+      let cards = [];
       let cardContainer = document.getElementById("card-container");
-      let topOffset = 0; // 새로운 카드가 추가될 때마다 top 위치를 변경하기 위한 변수
-      let cardLimit = 10; // 최대 카드 갯수
-      let cards = []; // 현재 생성된 카드들을 저장하는 배열
+      let topOffset = 0;
+      let cardLimit = 10;
 
-      // 카드를 생성하는 함수
       function createCard() {
-        // Create a new card element
         let newCard = document.createElement("div");
         newCard.classList.add("card");
         newCard.classList.add("move");
-        // newCard.textContent = "New Card";
+
+        if (cards.length >= 2) {
+          let lastTwoCards = cards.slice(-2);
+          lastTwoCards.forEach((card) => {
+            card.classList.remove("highlight");
+            setTimeout(() => {
+              card.style.backgroundColor = "";
+            }, 500);
+          });
+        }
+        cards.push(newCard);
+        let lastTwoCards = cards.slice(-2);
+        lastTwoCards.forEach((card) => card.classList.add("highlight"));
+        setTimeout(() => {
+          lastTwoCards.forEach((card) => card.classList.remove("highlight"));
+        }, 10000);
 
         // 순차적으로 기존 카드들의 위치를 변경
-        let cards = cardContainer.querySelectorAll(".card");
         for (let i = 0; i < cards.length; i++) {
           let card = cards[i];
           let currentTop = parseInt(card.style.top) || 0; // top 값이 없으면 0으로 설정
@@ -40,18 +52,12 @@
           card.style.top = newTop + "rem"; // 위치 변경
         }
 
-        // Add the new card to the container
         cardContainer.appendChild(newCard);
 
-        // Set the top position of the new card
         newCard.style.top = "0";
         topOffset += newCard.offsetHeight + 20; // 새로 추가한 카드의 높이 + 간격 만큼 top 위치를 증가
 
-        // Update the height of the container
         cardContainer.style.height = topOffset + "px";
-
-        // 카드 배열에 추가
-        cards.push(newCard);
 
         // 카드 갯수가 제한보다 크면 가장 오래된 카드를 삭제
         if (cards.length > cardLimit) {
@@ -60,30 +66,11 @@
           topOffset -= oldCard.offsetHeight + 16; // 삭제한 카드의 높이 + 간격 만큼 top 위치를 감소
           cardContainer.style.height = topOffset + "px"; // 컨테이너의 높이 변경
         }
-
-        // 짝수번째 카드일 경우 띠를 제거
-        if (cards.length % 2 === 1) {
-          var evenCards = cardContainer.querySelectorAll(
-            ".card:nth-child(even)"
-          );
-          for (var j = 0; j < evenCards.length; j++) {
-            evenCards[j].style.border = "none";
-          }
-        }
-
-        // 홀수번째 카드일 경우 띠를 추가
-        if (cards.length % 2 === 0) {
-          var oddCards = cardContainer.querySelectorAll(".card:nth-child(odd)");
-          for (var k = 0; k < oddCards.length; k++) {
-            oddCards[k].style.border = "1px solid red";
-          }
-        }
       }
 
-      // 5초마다 createCard 함수를 호출하여 새로운 카드를 추가
       setInterval(function () {
         createCard();
-      }, 1500);
+      }, 2000);
     </script>
   </body>
 </html>
