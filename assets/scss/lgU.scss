@@ -154,6 +154,15 @@
           line-height: 1.1;
           height: 36vh;
 
+          > h1 {
+            font-size: $h2;
+            font-weight: $w700;
+            letter-spacing: -0.05em;
+            color: $gray;
+            position: absolute;
+            top: -5%;
+          }
+
           .drive__info-date {
             font-weight: $w500;
             font-size: $h3;

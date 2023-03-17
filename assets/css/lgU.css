@@ -309,6 +309,14 @@ body.fixed {
     line-height: 1.1;
     height: 36vh;
   }
+  .drive swiper-container swiper-slide .drive__info > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    color: #858c92;
+    position: absolute;
+    top: -5%;
+  }
   .drive swiper-container swiper-slide .drive__info .drive__info-date {
     font-weight: 500;
     font-size: 1.9rem;

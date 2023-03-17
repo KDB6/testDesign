@@ -3,29 +3,49 @@
 @media (max-width: 480px) {
   #section1 {
     height: 70vh;
-    font-family: $noto;
-    flex-direction: column;
-    align-items: center;
+    overflow: hidden;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    overflow: hidden;
-    padding-top: 2%;
+
+    #card-container {
+      position: relative; /* 위치 지정 기준 설정 */
+      height: 70vh;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
 
     .card {
-      background: $white;
+      position: absolute; /* 위치를 고정 */
+      left: 0;
       width: 100%;
-      height: 20%;
+      height: 10rem;
+      background: $gray;
+      border-radius: 1.5rem;
       margin-bottom: 5%;
-      border-radius: 1rem;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+      transition: top 0.5s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
     }
-    .card__band {
-      width: 2.5%;
-      height: 100%;
-      background: #ccc;
+
+    /* 홀수번째 카드에 대한 스타일 */
+    .cardBand {
+      border: 2px solid blue;
+    }
+
+    .move {
+      animation: moveY 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes moveY {
+    from {
+      transform: translateY(-200%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 }

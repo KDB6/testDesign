@@ -5,14 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .swiper-container {
-        width: 600px;
-        height: 400px;
-      }
 
+    <style>
+      /* CSS */
       .swiper-slide {
-        background-color: #fff;
+        height: 300px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -25,38 +22,43 @@
     </style>
   </head>
   <body>
-    <swiper-container>
-      <swiper-wrapper>
-        <swiper-slide>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
           <h1>Slide 1</h1>
           <p>Slide 1 Content</p>
-        </swiper-slide>
-        <swiper-slide>
+        </div>
+        <div class="swiper-slide">
           <h1>Slide 2</h1>
           <p>Slide 2 Content</p>
-        </swiper-slide>
-        <swiper-slide>
+        </div>
+        <div class="swiper-slide">
           <h1>Slide 3</h1>
           <p>Slide 3 Content</p>
-        </swiper-slide>
-      </swiper-wrapper>
-      <swiper-pagination></swiper-pagination>
-    <swiper-container>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
-      var mySwiper = new Swiper(".swiper-container", {
-        // Optional parameters
-        direction: "horizontal",
-        loop: true,
+      // JavaScript
+      var swiper = new Swiper(".swiper-container", {
         pagination: {
           el: ".swiper-pagination",
+          clickable: true,
         },
         on: {
           slideChange: function () {
             var activeSlide = document.querySelector(".swiper-slide-active");
             var heading = activeSlide.querySelector("h1");
             var content = activeSlide.querySelector("p");
+            console.log("Slide changed!");
 
             // change text here
             // 예를 들어, 슬라이드 내의 h1 요소를 변경하고자 한다면:
