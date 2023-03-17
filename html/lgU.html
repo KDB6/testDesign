@@ -167,86 +167,10 @@
         </section>
 
         <!-- Swiper JS -->
-        <script
-          src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
-        >
-          pagination.style.display = "none";
-
-          const $slides = document.querySelectorAll('swiper-container');
-          for (let i of $slides) {
-            i.addEventListener('mouseover', function(){
-              swiper.autoplay.stop();
-            });
-            i.addEventListener('mouseout', function(){
-              swiper.autoplay.start();
-            });
-          }
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 
         <!-- dot -->
-        <script>
-          const slider = document.querySelectorAll(".drive__info");
-          const dot = document.querySelector(".drive__slide");
-          const driveProText = document.querySelector(".drive__peo-sit");
-
-          let sliderLength = slider.length,
-            dotIndex = "";
-          drivePeoIndex = "";
-          currentIndex = 0;
-
-          function init() {
-            createDot(); //닷 버튼 생성
-            drivePeo();
-          }
-          init();
-
-          function createDot() {
-            for (let i = 0; i < sliderLength; i++) {
-              //   dotIndex += `<div class="dot"></div>`;
-            }
-            dot.innerHTML = dotIndex;
-            dot.firstElementChild.classList.add("active");
-          }
-
-          function gotoSlider(index) {
-            currentIndex = index;
-
-            if (currentIndex <= 4) {
-              let dotActive = document.querySelectorAll(".drive__slide .dot");
-              dotActive.forEach((el) => el.classList.remove("active"));
-              dotActive[index].classList.add("active");
-            } else {
-              let dotActive = document.querySelectorAll(".drive__slide .dot");
-              dotActive.forEach((el) => el.classList.remove("active"));
-              dotActive[0].classList.add("active");
-            }
-          }
-
-          let text = [
-            "1월 23일 운행 예정",
-            "월별 수주 건 수",
-            "땡떙땡",
-            "땡떙땡",
-          ];
-          let index = 0;
-
-          function changeText() {
-            document.querySelector(".drive__peo-sit").innerText = text[index];
-            index = (index + 1) % 4;
-          }
-
-          let interval = window.setInterval(changeText, 5200);
-          window.onunload = function () {
-            window.clearInterval(interval);
-          };
-
-          function drivePeo() {
-            for (i = 0; i < sliderLength; i++) {
-              drivePeoIndex += `<h1>${text}</h1>`;
-            }
-            driveProText.innerHTML = drivePeoIndex;
-          }
-        </script>
+        <script></script>
       </body>
     </html>
   </body>

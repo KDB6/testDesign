@@ -20,8 +20,8 @@
     <script>
       let cardContainer = document.getElementById("card-container");
       let topOffset = 0; // 새로운 카드가 추가될 때마다 top 위치를 변경하기 위한 변수
-      var cardLimit = 10; // 최대 카드 갯수
-      var cards = []; // 현재 생성된 카드들을 저장하는 배열
+      let cardLimit = 10; // 최대 카드 갯수
+      let cards = []; // 현재 생성된 카드들을 저장하는 배열
 
       // 카드를 생성하는 함수
       function createCard() {
@@ -55,7 +55,7 @@
 
         // 카드 갯수가 제한보다 크면 가장 오래된 카드를 삭제
         if (cards.length > cardLimit) {
-          var oldCard = cards.shift();
+          let oldCard = cards.shift();
           cardContainer.removeChild(oldCard);
           topOffset -= oldCard.offsetHeight + 16; // 삭제한 카드의 높이 + 간격 만큼 top 위치를 감소
           cardContainer.style.height = topOffset + "px"; // 컨테이너의 높이 변경
