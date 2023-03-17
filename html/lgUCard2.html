@@ -65,11 +65,8 @@
           cardContainer.style.height = topOffset + "px"; // 컨테이너의 높이 변경
         }
 
-        // move card down
         if (card.dataset.id == newCard.dataset.id - 3) {
-          // update data-id attribute
           card.dataset.id = newCard.dataset.id;
-          // update class name
           if (card.dataset.id % 2 !== 0) {
             card.classList.add("odd");
             card.classList.remove("even");

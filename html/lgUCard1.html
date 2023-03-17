@@ -25,7 +25,6 @@
 
       // 카드를 생성하는 함수
       function createCard() {
-        // Create a new card element
         let newCard = document.createElement("div");
         newCard.classList.add("card");
         newCard.classList.add("move");
@@ -40,14 +39,11 @@
           card.style.top = newTop + "rem"; // 위치 변경
         }
 
-        // Add the new card to the container
         cardContainer.appendChild(newCard);
 
-        // Set the top position of the new card
         newCard.style.top = "0";
         topOffset += newCard.offsetHeight + 20; // 새로 추가한 카드의 높이 + 간격 만큼 top 위치를 증가
 
-        // Update the height of the container
         cardContainer.style.height = topOffset + "px";
 
         // 카드 배열에 추가
