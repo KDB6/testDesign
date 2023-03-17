@@ -6,34 +6,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="../assets/css/common.css" />
-    <link rel="stylesheet" href="../assets/css/font.css" />
-    <link rel="stylesheet" href="../assets/css/reset.css" />
-
-    <style>
-      .card {
-        position: absolute; /* 위치를 고정 */
-        left: 0;
+    <style lang="">
+      .swiper-container {
         width: 100%;
-        height: 10rem;
-        background: gray;
-        border-radius: 1rem;
-        margin-bottom: 5%;
-        transition: top 0.5s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
-        overflow: hidden;
-        width: 300px;
+        height: 100%;
       }
 
-      .progress {
-        width: 3%;
-        height: 100%;
-        background: #ff7171;
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* 상하좌우 여백 설정 */
+        margin: 50px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: auto;
       }
     </style>
   </head>
   <body>
-    <div class="card">
-      <div class="progress"></div>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="slide1.jpg" />
+          <h2>Slide 1</h2>
+          <p>This is the first slide</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="slide2.jpg" />
+          <h2>Slide 2</h2>
+          <p>This is the second slide</p>
+        </div>
+        <div class="swiper-slide">
+          <img src="slide3.jpg" />
+          <h2>Slide 3</h2>
+          <p>This is the third slide</p>
+        </div>
+      </div>
     </div>
+
+    <div id="outside-text">
+      <h2>Slide 1</h2>
+      <p>This is the first slide</p>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+      const outsideText = document.getElementById("outside-text");
+      const swiper = new Swiper(".swiper-container", {
+        // 슬라이드가 전환될 때마다 호출되는 콜백 함수
+        loop: true,
+        on: {
+          slideChange: function () {
+            // 현재 활성화된 슬라이드의 인덱스를 가져옴
+            const activeIndex = swiper.activeIndex;
+            // 해당 슬라이드의 제목과 내용을 가져옴
+            const slideTitle =
+              this.slides[activeIndex].querySelector("h2").textContent;
+            const slideContent =
+              this.slides[activeIndex].querySelector("p").textContent;
+            // 바깥쪽 텍스트의 내용을 갱신함
+            outsideText.querySelector("h2").textContent = slideTitle;
+            outsideText.querySelector("p").textContent = slideContent;
+          },
+        },
+      });
+    </script>
   </body>
 </html>

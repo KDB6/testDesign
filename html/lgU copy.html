@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lgU</title>
+    <title>lgU copy</title>
 
     <link rel="stylesheet" href="../assets/css/common.css" />
     <link rel="stylesheet" href="../assets/css/font.css" />
@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="../assets/css/font.css" />
         <link rel="stylesheet" href="../assets/css/reset.css" />
 
-        <link rel="stylesheet" href="../assets/css/lgU.css" />
+        <link rel="stylesheet" href="../assets/css/lgU copy.css" />
 
         <!-- swiper -->
         <link rel="stylesheet" href="../assets/css/swiper.css" />
@@ -79,130 +79,69 @@
                 <div class="dot"></div> -->
               </div>
             </div>
-            <swiper-container
-              class="mySwiper"
-              pagination="true"
-              pagination-clickable="true"
-              space-between="30"
-              loop="true"
-              autocapitalize="false"
-            >
-              <!-- drive__info1 -->
-              <swiper-slide
-                ><div class="drive__info">
-                  <!-- <h2 class="drive__info-date">
-                    <span>상차</span> 01.23 (목) 10:00 <em>지</em>
-                  </h2>
-                  <p class="drive__info-address">
-                    경기 양주시 은현면 그루고개로 332<br />그루고개로 332
-                  </p>
-                  <div class="drive__info-goal">
-                    <ul>
-                      <li>상차지까지</li>
-                      <li>180km</li>
-                    </ul>
-                    <ul>
-                      <li>예상 소요시간</li>
-                      <li>1시간 59분</li>
-                    </ul>
-                    <ul>
-                      <li>예상 유류비</li>
-                      <li>70,000원</li>
-                    </ul>
-                  </div> -->
-                </div></swiper-slide
-              >
 
-              <!-- drive__info2 -->
-              <swiper-slide
-                ><div class="graph__info">
-                  <div class="graph">
-                    <div class="bar1 graph-ani"></div>
-                    <div class="bar2 graph-ani"></div>
-                    <div class="bar3 graph-ani"></div>
-                    <div class="bar4 graph-ani"></div>
-                    <div class="bar5 graph-ani"></div>
-                    <div class="bar6 graph-ani"></div>
-                  </div></div
-              ></swiper-slide>
-
-              <!-- drive__info3 -->
-              <swiper-slide>
-                <div class="car__info">
-                  <!-- <h2 class="drive__info-date">
-                    <span>상차</span> 01.23 (목) 10:00 <em>지</em>
-                  </h2>
-                  <p class="drive__info-address">
-                    경기 양주시 은현면 그루고개로 332<br />그루고개로 332
-                  </p>
-                  <div class="drive__info-goal">
-                    <ul>
-                      <li>상차지까지</li>
-                      <li>180km</li>
-                    </ul>
-                    <ul>
-                      <li>예상 소요시간</li>
-                      <li>1시간 59분</li>
-                    </ul>
-                    <ul>
-                      <li>예상 유류비</li>
-                      <li>70,000원</li>
-                    </ul>
-                  </div> -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="drive__info">
+                    <h1>0월 00일 운행 예정</h1>
+                    <p>This is the first slide</p>
+                  </div>
                 </div>
-              </swiper-slide>
-
-              <!-- drive__info4 -->
-              <swiper-slide>
-                <div class="promotion__info">
-                  <!-- <div class="graph">
-                    <div class="bar1 graph-ani"></div>
-                    <div class="bar2 graph-ani"></div>
-                    <div class="bar3 graph-ani"></div>
-                    <div class="bar4 graph-ani"></div>
-                    <div class="bar5 graph-ani"></div>
-                    <div class="bar6 graph-ani"></div>
-                  </div> -->
+                <div class="swiper-slide">
+                  <div class="graph__info">
+                    <div class="graph">
+                      <div class="bar1 graph-ani"></div>
+                      <div class="bar2 graph-ani"></div>
+                      <div class="bar3 graph-ani"></div>
+                      <div class="bar4 graph-ani"></div>
+                      <div class="bar5 graph-ani"></div>
+                      <div class="bar6 graph-ani"></div>
+                    </div>
+                  </div>
                 </div>
-              </swiper-slide>
-            </swiper-container>
+                <div class="swiper-slide">
+                  <div class="car__info"></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="promotion__info"></div>
+                </div>
+              </div>
+            </div>
+
+            <div id="outside-text">
+              <h2>Slide 1</h2>
+              <p>This is the first slide</p>
+            </div>
           </div>
         </section>
 
         <!-- Swiper JS -->
-        <script
-          src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
-        >
-          // Swiper 초기화
-          let swiper = new Swiper('swiper-container', {
-            // 옵션 설정
-          });
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
 
-          // 슬라이드 변경 시 텍스트 변경
-          swiper.on('slideChange', function() {
-            let slideIndex = swiper.activeIndex;
-            let slideText = '';
-
-            // 텍스트를 변경하는 코드
-            const slideTextElement = document.querySelectorAll('.slide-text');
-            slideTextElement.innerHTML = slideText;
-
-            // 현재 슬라이드 인덱스에 따라서 텍스트 변경
-            switch(slideIndex) {
-              case 0:
-                slideText = '0월 00일 운행 예정';
-                break;
-              case 1:
-                slideText = '월간 수주 건 수';
-                break;
-              case 2:
-                slideText = '화물 등록 현황';
-                break;
-              case 3:
-                slideText = '프로모션 타이틀';
-                break;
-              // 추가적으로 필요한 슬라이드에 대한 텍스트를 설정할 수 있습니다.
-            }
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+        <script>
+          const outsideText = document.getElementById("outside-text");
+          const swiper = new Swiper(".swiper-container", {
+            // 슬라이드가 전환될 때마다 호출되는 콜백 함수
+            loop: true,
+            on: {
+              slideChange: function () {
+                // 현재 활성화된 슬라이드의 인덱스를 가져옴
+                const activeIndex = swiper.activeIndex;
+                // 해당 슬라이드의 제목과 내용을 가져옴
+                const slideTitle =
+                  this.slides[activeIndex].querySelector("h2").textContent;
+                const slideContent =
+                  this.slides[activeIndex].querySelector("p").textContent;
+                // 바깥쪽 텍스트의 내용을 갱신함
+                outsideText.querySelector("h2").textContent = slideTitle;
+                outsideText.querySelector("p").textContent = slideContent;
+              },
+            },
           });
         </script>
 
