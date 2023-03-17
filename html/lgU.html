@@ -208,14 +208,24 @@
 
         <script>
           const driveInfo = document.querySelector(".drive__info");
-          const graph__info = document.querySelector(".graph__info");
+          const graphInfo = document.querySelector(".graph__info");
 
-          driveInfo.addEventListener("mouseover", () => {
+          driveInfo.addEventListener("touchstart", () => {
             driveInfo.style.background = "#cecece";
             driveInfo.style.transition = "all 0.3s";
           });
 
-          driveInfo.addEventListener("mouseout", () => {
+          driveInfo.addEventListener("touchend", () => {
+            driveInfo.style.background = "#fff";
+            driveInfo.style.transition = "all 0.3s";
+          });
+
+          graphInfo.addEventListener("touchstart", () => {
+            driveInfo.style.background = "#cecece";
+            driveInfo.style.transition = "all 0.3s";
+          });
+
+          graphInfo.addEventListener("touchend", () => {
             driveInfo.style.background = "#fff";
             driveInfo.style.transition = "all 0.3s";
           });
