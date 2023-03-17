@@ -173,7 +173,7 @@
         <script
           src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
         >
-                    // Swiper 초기화
+          // Swiper 초기화
           let swiper = new Swiper('.swiper-container', {
             // 옵션 설정
           });
@@ -201,13 +201,10 @@
             }
 
             // 텍스트를 변경하는 코드
-            let slideTextElement = document.querySelector('.slide-text');
-            slideTextElement.textContent = slideText;
+            const slideTextElement = document.querySelector('.slide-text > h1');
+            slideTextElement.innerHTML = slideText;
           });
         </script>
-
-        <!-- dot -->
-        <script></script>
       </body>
     </html>
   </body>
