@@ -173,36 +173,34 @@
         <script
           src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
         >
-          // Swiper 초기화
-          let swiper = new Swiper('swiper-container', {
-            // 옵션 설정
+
+          const slideTextContainer = document.querySelector(".drive__peo-sit");
+          const slideText = slideTextContainer.querySelector("h1");
+
+          let swiper = new Swiper(".mySwiper", {
+            // set options
           });
 
-          // 슬라이드 변경 시 텍스트 변경
-          swiper.on('slideChange', function() {
+          swiper.on("slideChange", function () {
             let slideIndex = swiper.activeIndex;
-            let slideText = '';
+            let newText = "";
 
-            // 텍스트를 변경하는 코드
-            const slideTextElement = document.querySelectorAll('.slide-text');
-            slideTextElement.innerHTML = slideText;
-
-            // 현재 슬라이드 인덱스에 따라서 텍스트 변경
-            switch(slideIndex) {
+            switch (slideIndex) {
               case 0:
-                slideText = '0월 00일 운행 예정';
+                newText = "Scheduled to operate on 00/00";
                 break;
               case 1:
-                slideText = '월간 수주 건 수';
+                newText = "Number of orders received per month";
                 break;
               case 2:
-                slideText = '화물 등록 현황';
+                newText = "Cargo registration status";
                 break;
               case 3:
-                slideText = '프로모션 타이틀';
+                newText = "Promotion Title";
                 break;
-              // 추가적으로 필요한 슬라이드에 대한 텍스트를 설정할 수 있습니다.
             }
+
+            slideText.innerHTML = newText;
           });
         </script>
 
