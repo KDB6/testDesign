@@ -183,11 +183,41 @@ body.fixed {
 
 /* 변수 */
 @media (max-width: 560px) {
+  .refresh {
+    position: fixed;
+    right: 5%;
+    bottom: 13%;
+    transition: all 3s;
+  }
+  .refresh > svg {
+    width: 4rem;
+    height: 4rem;
+    padding: 1rem 1rem;
+    background: #858c92;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .refresh .spin {
+    animation: spin 3s infinite;
+  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(-180deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
   #meun {
     font-family: "NotoSansKR";
     color: #858c92;
-    width: 100%;
     background: #858c92;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
   }
   #meun > nav > ul {
     display: flex;

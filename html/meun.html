@@ -13,6 +13,41 @@
     <link rel="stylesheet" href="../assets/css/meun.css" />
   </head>
   <body>
+    <div class="refresh">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.07178 7.99998C5.80947 6.72226 6.88612 5.67343 8.18271 4.96944C9.4793 4.26545 10.9453 3.93373 12.4187 4.01094C13.892 4.08816 15.3153 4.57131 16.5312 5.40697C17.7471 6.24264 18.7083 7.39826 19.3083 8.74609"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M3.2318 5.51531L3.96122 8.67485C4.08545 9.21298 4.6224 9.54851 5.16053 9.42428L8.32007 8.69487"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M18.9282 15.9998C18.1905 17.2775 17.1139 18.3263 15.8173 19.0303C14.5207 19.7343 13.0547 20.066 11.5813 19.9888C10.108 19.9116 8.68467 19.4284 7.46877 18.5928C6.25287 17.7571 5.29175 16.6015 4.69166 15.2537"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+        <path
+          d="M20.7682 18.4844L20.0388 15.3249C19.9145 14.7868 19.3776 14.4512 18.8395 14.5755L15.6799 15.3049"
+          stroke="white"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        />
+      </svg>
+    </div>
+
     <footer id="meun">
       <nav>
         <ul>
@@ -87,5 +122,18 @@
         </ul>
       </nav>
     </footer>
+
+    <script>
+      const refresh = document.querySelector(".refresh");
+      const svg = document.querySelector(".refresh > svg");
+
+      refresh.addEventListener("touchstart", () => {
+        svg.classList.add("spin");
+      });
+
+      refresh.addEventListener("touchend", () => {
+        svg.classList.remove("spin");
+      });
+    </script>
   </body>
 </html>
