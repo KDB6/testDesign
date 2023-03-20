@@ -284,6 +284,39 @@ body.fixed {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  #announcement .ann__map .ann__map-icon1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 87%;
+    top: 62%;
+  }
+  #announcement .ann__map .ann__map-icon1 > svg {
+    width: 5rem;
+    height: 5rem;
+    background: #fff;
+  }
+  #announcement .ann__map .ann__map-icon1 > svg:first-child {
+    border-radius: 1rem 1rem 0 0;
+    margin-bottom: 2%;
+  }
+  #announcement .ann__map .ann__map-icon1 > svg:last-child {
+    border-radius: 0 0 1rem 1rem;
+  }
+  #announcement .ann__map .ann__map-icon2 {
+    background: #fff;
+    position: absolute;
+    border-radius: 1rem;
+    left: 87%;
+    top: 88%;
+    display: flex;
+    align-items: center;
+  }
+  #announcement .ann__map .ann__map-icon2 > svg {
+    width: 5rem;
+    height: 5rem;
+  }
   #announcement .ann__location {
     height: 8vh;
     display: flex;
