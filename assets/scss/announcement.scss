@@ -13,6 +13,10 @@
       background: #202020;
       box-sizing: border-box;
       padding: 2rem 5rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
 
       .ann__icon {
         display: flex;
@@ -26,6 +30,7 @@
           box-sizing: border-box;
 
           .ann__icon-left {
+            width: 40%;
             height: 8.3rem;
             > svg {
               width: 10rem;
@@ -35,6 +40,7 @@
           }
 
           .ann__icon-right {
+            width: 60%;
             color: $white;
 
             .ann__icon-right-num {
@@ -196,15 +202,19 @@
       background: #353535;
 
       .ann__option-left {
-        width: 19%;
+        width: 19.5%;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        > svg {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
       }
 
       .ann__option-mid {
         width: 60%;
-        padding: 2rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -215,14 +225,22 @@
           color: $white;
           font-size: 2rem;
           line-height: 1;
+          height: 9vh;
+          display: flex;
+          align-items: center;
         }
       }
 
       .ann__option-right {
-        width: 19%;
+        width: 19.5%;
         display: flex;
         align-items: center;
         justify-content: center;
+
+        > svg {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
       }
     }
   }

@@ -195,6 +195,10 @@ body.fixed {
     background: #202020;
     box-sizing: border-box;
     padding: 2rem 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
   #announcement .ann__main .ann__icon {
     display: flex;
@@ -208,6 +212,7 @@ body.fixed {
     box-sizing: border-box;
   }
   #announcement .ann__main .ann__icon .ann__icon-top .ann__icon-left {
+    width: 40%;
     height: 8.3rem;
   }
   #announcement .ann__main .ann__icon .ann__icon-top .ann__icon-left > svg {
@@ -216,6 +221,7 @@ body.fixed {
     padding-right: 1rem;
   }
   #announcement .ann__main .ann__icon .ann__icon-top .ann__icon-right {
+    width: 60%;
     color: #fff;
   }
   #announcement .ann__main .ann__icon .ann__icon-top .ann__icon-right .ann__icon-right-num {
@@ -351,14 +357,17 @@ body.fixed {
     background: #353535;
   }
   #announcement .ann__option .ann__option-left {
-    width: 19%;
+    width: 19.5%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  #announcement .ann__option .ann__option-left > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
   #announcement .ann__option .ann__option-mid {
     width: 60%;
-    padding: 2rem 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -369,11 +378,18 @@ body.fixed {
     color: #fff;
     font-size: 2rem;
     line-height: 1;
+    height: 9vh;
+    display: flex;
+    align-items: center;
   }
   #announcement .ann__option .ann__option-right {
-    width: 19%;
+    width: 19.5%;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  #announcement .ann__option .ann__option-right > svg {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
