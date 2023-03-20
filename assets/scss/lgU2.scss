@@ -134,10 +134,10 @@
     }
 
     // swiper
-    .swiper-container {
-      overflow: hidden;
+    swiper-container {
+      box-sizing: border-box;
 
-      .swiper-slide {
+      swiper-slide {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -153,6 +153,64 @@
           margin-top: 3%;
           line-height: 1.1;
           height: 36vh;
+
+          > h1 {
+            font-size: $h2;
+            font-weight: $w700;
+            letter-spacing: -0.05em;
+            color: $gray;
+            position: absolute;
+            top: -5%;
+          }
+
+          .drive__info-date {
+            font-weight: $w500;
+            font-size: $h3;
+
+            > span {
+              font-size: $h2;
+              font-weight: $w700;
+              color: $black2;
+              margin-right: 1%;
+            }
+
+            > em {
+              font-size: $c1;
+              border: 1px solid $black2;
+              border-radius: 0.5rem;
+              padding: 0 0.2rem;
+            }
+          }
+
+          .drive__info-address {
+            font-size: $b2;
+            font-weight: $w500;
+            margin-top: 1rem;
+            line-height: 1.5;
+            border-bottom: 1px solid $gray;
+            padding-bottom: 6%;
+          }
+
+          .drive__info-goal {
+            > ul {
+              display: flex;
+              justify-content: space-between;
+              margin: 8% 0;
+
+              > li {
+                font-size: $b2;
+                font-weight: $w500;
+
+                &:first-child {
+                  color: $gray;
+                }
+              }
+
+              &:last-child {
+                margin: 0;
+              }
+            }
+          }
         }
 
         // graph__info
@@ -235,9 +293,6 @@
           line-height: 1.1;
           box-shadow: 7px 7px 7px 1px #00000005;
           height: 36vh;
-          display: flex;
-          justify-content: flex-end;
-          flex-direction: column;
         }
 
         // promotion__info

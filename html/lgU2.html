@@ -4,18 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lgU copy</title>
+    <title>lgU2</title>
 
     <link rel="stylesheet" href="../assets/css/common.css" />
     <link rel="stylesheet" href="../assets/css/font.css" />
     <link rel="stylesheet" href="../assets/css/reset.css" />
 
-    <link rel="stylesheet" href="../assets/css/lgUCopy.css" />
+    <link rel="stylesheet" href="../assets/css/lgU2.css" />
 
     <!-- swiper -->
     <link rel="stylesheet" href="../assets/css/swiper.css" />
   </head>
-
   <body>
     <section id="section01" class="container">
       <!-- header -->
@@ -53,7 +52,7 @@
           <div class="drive__peo">
             <h2><span>김로지</span> 님의</h2>
             <div class="drive__peo-sit slide-text">
-              <h1>Drive</h1>
+              <h1 class=""></h1>
             </div>
           </div>
           <div class="drive__slide">
@@ -63,76 +62,70 @@
                 <div class="dot"></div> -->
           </div>
         </div>
-
-        <!-- swiper-container -->
-        <div class="swiper-container mySwiper">
-          <div class="swiper-wrapper">
-            <!-- swiper-slide -->
-            <div class="swiper-slide">
-              <div class="drive__info"></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="graph__info">
-                <div class="graph">
-                  <div class="bar1 graph-ani"></div>
-                  <div class="bar2 graph-ani"></div>
-                  <div class="bar3 graph-ani"></div>
-                  <div class="bar4 graph-ani"></div>
-                  <div class="bar5 graph-ani"></div>
-                  <div class="bar6 graph-ani"></div>
-                </div>
+        <swiper-container
+          class="mySwiper"
+          pagination="true"
+          pagination-clickable="true"
+          space-between="30"
+          loop="true"
+          autocapitalize="false"
+        >
+          <!-- drive__info1 -->
+          <swiper-slide>
+            <div class="drive__info"></div>
+          </swiper-slide>
+          <!-- drive__info2 -->
+          <swiper-slide>
+            <div class="graph__info">
+              <div class="graph">
+                <div class="bar1 graph-ani"></div>
+                <div class="bar2 graph-ani"></div>
+                <div class="bar3 graph-ani"></div>
+                <div class="bar4 graph-ani"></div>
+                <div class="bar5 graph-ani"></div>
+                <div class="bar6 graph-ani"></div>
               </div>
             </div>
-            <div class="swiper-slide">
-              <div class="car__info"></div>
-            </div>
-            <div class="swiper-slide">
-              <div class="promotion__info"></div>
-            </div>
-          </div>
-
-          <div class="swiper-pagination"></div>
-        </div>
+          </swiper-slide>
+          <!-- drive__info3 -->
+          <swiper-slide>
+            <div class="car__info"></div>
+          </swiper-slide>
+          <!-- drive__info4 -->
+          <swiper-slide>
+            <div class="promotion__info"></div>
+          </swiper-slide>
+        </swiper-container>
       </div>
     </section>
 
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      window.addEventListener("DOMContentLoaded", function () {
-        const slideTextContainer = document.querySelector(".drive__peo-sit");
-        const slideText = slideTextContainer.querySelector("h1");
+      const slideTextContainer = document.querySelector(".drive__peo-sit");
+      const slideText = slideTextContainer.querySelector("h1");
 
-        let swiper = new Swiper(".swiper-container", {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          loop: true,
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-        });
+      let swiper = new Swiper(".mySwiper", {});
 
-        swiper.on("slideChange", function () {
-          let slideIndex = swiper.activeIndex;
-          let newText = "";
-          switch (slideIndex) {
-            case 0:
-              newText = "Drive";
-              break;
-            case 1:
-              newText = "Graph";
-              break;
-            case 2:
-              newText = "Car";
-              break;
-            case 3:
-              newText = "Promotion";
-              break;
-          }
-          slideText.innerHTML = newText;
-        });
+      swiper.on("slideChange", function () {
+        let slideIndex = swiper.activeIndex;
+        let newText = "";
+        switch (slideIndex) {
+          case 0:
+            newText = "1";
+            break;
+          case 1:
+            newText = "2";
+            break;
+          case 2:
+            newText = "3";
+            break;
+          case 3:
+            newText = "4";
+            break;
+        }
+        slideText.innerHTML = newText;
       });
     </script>
 
