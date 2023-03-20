@@ -201,12 +201,23 @@ body.fixed {
   .refresh .spin {
     animation: spin 2s;
   }
+  .refresh .click {
+    animation: click 0.7s;
+  }
   @keyframes spin {
     0% {
       transform: rotate(0deg);
     }
     100% {
       transform: rotate(-360deg);
+    }
+  }
+  @keyframes click {
+    0% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
     }
   }
   #meun {
@@ -221,10 +232,45 @@ body.fixed {
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+  }
+  #meun > nav > ul .nav-item {
+    transition: 0.3s;
+    z-index: 1;
+    position: relative;
+  }
+  #meun > nav > ul .nav-item:before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #dfe2ea;
+    border-radius: 0 0 0.5rem 0.5rem;
+    opacity: 0;
+    transition: 0.3s;
+  }
+  #meun > nav > ul .nav-item:not(.is-active):hover:before {
+    opacity: 1;
+    bottom: 0;
+  }
+  #meun > nav > ul .nav-item:not(.is-active):hover {
+    color: #333;
+  }
+  #meun > nav > ul .nav-indicator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 4px;
+    transition: 0.4s;
+    height: 5px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
   }
   #meun > nav > ul > li {
-    height: 10vh;
     width: 25%;
+    height: 10vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -232,5 +278,6 @@ body.fixed {
   }
   #meun > nav > ul > li > h2 {
     color: #fff;
+    padding-top: 5%;
   }
 }

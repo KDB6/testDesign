@@ -51,7 +51,7 @@
     <footer id="meun">
       <nav>
         <ul>
-          <li>
+          <li class="nav-item">
             <div class="progress"></div>
             <svg
               width="24"
@@ -69,7 +69,7 @@
             </svg>
             <h2>홈</h2>
           </li>
-          <li>
+          <li class="nav-item">
             <svg
               width="24"
               height="24"
@@ -86,7 +86,7 @@
             </svg>
             <h2>홈</h2>
           </li>
-          <li>
+          <li class="nav-item">
             <svg
               width="24"
               height="24"
@@ -103,7 +103,7 @@
             </svg>
             <h2>홈</h2>
           </li>
-          <li>
+          <li class="nav-item">
             <svg
               width="24"
               height="24"
@@ -120,28 +120,54 @@
             </svg>
             <h2>홈</h2>
           </li>
+          <span class="nav-indicator"></span>
         </ul>
       </nav>
     </footer>
 
     <script>
+      // refresh
       const refresh = document.querySelector(".refresh");
       const svg = document.querySelector(".refresh > svg");
 
       function click() {
         refresh.addEventListener("click", () => {
           svg.classList.add("spin");
-        });
-
-        setTimeout(
-          click(),
-          () => {
+          svg.classList.add("click");
+          setTimeout(() => {
             svg.classList.remove("spin");
-          },
-          2000
-        );
+          }, 2000);
+          setTimeout(() => {
+            svg.classList.remove("click");
+          }, 300);
+        });
       }
       click();
+
+      // meun
+      const indicator = document.querySelector(".nav-indicator");
+      const items = document.querySelectorAll(".nav-item");
+
+      function handleIndicator(el) {
+        items.forEach((item) => {
+          item.classList.remove("is-active");
+          item.removeAttribute("style");
+        });
+
+        indicator.style.width = `${el.offsetWidth}px`;
+        indicator.style.left = `${el.offsetLeft}px`;
+        indicator.style.backgroundColor = el.getAttribute("active-color");
+
+        el.classList.add("is-active");
+        el.style.color = el.getAttribute("active-color");
+      }
+
+      items.forEach((item, index) => {
+        item.addEventListener("click", (e) => {
+          handleIndicator(e.target);
+        });
+        item.classList.contains("is-active") && handleIndicator(item);
+      });
     </script>
   </body>
 </html>
