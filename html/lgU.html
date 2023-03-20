@@ -88,34 +88,12 @@
               autocapitalize="false"
             >
               <!-- drive__info1 -->
-              <swiper-slide
-                ><div class="drive__info">
-                  <!-- <h2 class="drive__info-date">
-                    <span>상차</span> 01.23 (목) 10:00 <em>지</em>
-                  </h2>
-                  <p class="drive__info-address">
-                    경기 양주시 은현면 그루고개로 332<br />그루고개로 332
-                  </p>
-                  <div class="drive__info-goal">
-                    <ul>
-                      <li>상차지까지</li>
-                      <li>180km</li>
-                    </ul>
-                    <ul>
-                      <li>예상 소요시간</li>
-                      <li>1시간 59분</li>
-                    </ul>
-                    <ul>
-                      <li>예상 유류비</li>
-                      <li>70,000원</li>
-                    </ul>
-                  </div> -->
-                </div></swiper-slide
-              >
-
+              <swiper-slide>
+                <div class="drive__info"></div>
+              </swiper-slide>
               <!-- drive__info2 -->
-              <swiper-slide
-                ><div class="graph__info">
+              <swiper-slide>
+                <div class="graph__info">
                   <div class="graph">
                     <div class="bar1 graph-ani"></div>
                     <div class="bar2 graph-ani"></div>
@@ -123,81 +101,48 @@
                     <div class="bar4 graph-ani"></div>
                     <div class="bar5 graph-ani"></div>
                     <div class="bar6 graph-ani"></div>
-                  </div></div
-              ></swiper-slide>
-
-              <!-- drive__info3 -->
-              <swiper-slide>
-                <div class="car__info">
-                  <!-- <h2 class="drive__info-date">
-                    <span>상차</span> 01.23 (목) 10:00 <em>지</em>
-                  </h2>
-                  <p class="drive__info-address">
-                    경기 양주시 은현면 그루고개로 332<br />그루고개로 332
-                  </p>
-                  <div class="drive__info-goal">
-                    <ul>
-                      <li>상차지까지</li>
-                      <li>180km</li>
-                    </ul>
-                    <ul>
-                      <li>예상 소요시간</li>
-                      <li>1시간 59분</li>
-                    </ul>
-                    <ul>
-                      <li>예상 유류비</li>
-                      <li>70,000원</li>
-                    </ul>
-                  </div> -->
+                  </div>
                 </div>
               </swiper-slide>
-
+              <!-- drive__info3 -->
+              <swiper-slide>
+                <div class="car__info"></div>
+              </swiper-slide>
               <!-- drive__info4 -->
               <swiper-slide>
-                <div class="promotion__info">
-                  <!-- <div class="graph">
-                    <div class="bar1 graph-ani"></div>
-                    <div class="bar2 graph-ani"></div>
-                    <div class="bar3 graph-ani"></div>
-                    <div class="bar4 graph-ani"></div>
-                    <div class="bar5 graph-ani"></div>
-                    <div class="bar6 graph-ani"></div>
-                  </div> -->
-                </div>
+                <div class="promotion__info"></div>
               </swiper-slide>
             </swiper-container>
           </div>
         </section>
 
+        <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 
         <script>
-          window.addEventListener("DOMContentLoaded", function () {
-            const slideTextContainer =
-              document.querySelector(".drive__peo-sit");
-            const slideText = slideTextContainer.querySelector("h1");
+          const slideTextContainer = document.querySelector(".drive__peo-sit");
+          const slideText = slideTextContainer.querySelector("h1");
 
-            let swiper = new Swiper(".mySwiper", {});
+          let swiper = new Swiper(".mySwiper", {});
 
-            swiper.on("slideChange", function () {
-              let slideIndex = swiper.activeIndex;
-              let newText = "";
-              switch (slideIndex) {
-                case 0:
-                  newText = "1";
-                  break;
-                case 1:
-                  newText = "2";
-                  break;
-                case 2:
-                  newText = "3";
-                  break;
-                case 3:
-                  newText = "4";
-                  break;
-              }
-              slideText.innerHTML = newText;
-            });
+          swiper.on("slideChange", function () {
+            let slideIndex = swiper.activeIndex;
+            let newText = "";
+            switch (slideIndex) {
+              case 0:
+                newText = "1";
+                break;
+              case 1:
+                newText = "2";
+                break;
+              case 2:
+                newText = "3";
+                break;
+              case 3:
+                newText = "4";
+                break;
+            }
+            slideText.innerHTML = newText;
           });
         </script>
 
