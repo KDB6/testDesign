@@ -11,9 +11,10 @@
     <link rel="stylesheet" href="../assets/css/reset.css" />
 
     <link rel="stylesheet" href="../assets/css/lgU.css" />
-
-    <!-- swiper -->
-    <link rel="stylesheet" href="../assets/css/swiper.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
   </head>
 
   <body>
@@ -65,7 +66,7 @@
         </div>
 
         <!-- swiper-container -->
-        <div class="swiper-container mySwiper">
+        <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <!-- swiper-slide -->
             <div class="swiper-slide">
@@ -100,11 +101,12 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      window.addEventListener("DOMContentLoaded", function () {
+      // 슬라이드 쇼가 로드된 후에 실행되도록 window load 이벤트 리스너를 추가합니다.
+      window.addEventListener("load", function () {
         const slideTextContainer = document.querySelector(".drive__peo-sit");
         const slideText = slideTextContainer.querySelector("h1");
 
-        let swiper = new Swiper(".swiper-container", {
+        let swiper = new Swiper(".mySwiper", {
           slidesPerView: 1,
           spaceBetween: 30,
           loop: true,
@@ -112,26 +114,29 @@
             el: ".swiper-pagination",
             clickable: true,
           },
-        });
-
-        swiper.on("slideChange", function () {
-          let slideIndex = swiper.activeIndex;
-          let newText = "";
-          switch (slideIndex) {
-            case 0:
-              newText = "Drive";
-              break;
-            case 1:
-              newText = "Graph";
-              break;
-            case 2:
-              newText = "Car";
-              break;
-            case 3:
-              newText = "Promotion";
-              break;
-          }
-          slideText.innerHTML = newText;
+          // slideChange 이벤트 리스너를 추가합니다.
+          on: {
+            slideChange: function () {
+              // 현재 활성화된 슬라이드의 인덱스를 가져옵니다.
+              let slideIndex = this.realIndex;
+              let newText = "";
+              switch (slideIndex) {
+                case 0:
+                  newText = "Drive";
+                  break;
+                case 1:
+                  newText = "Graph";
+                  break;
+                case 2:
+                  newText = "Car";
+                  break;
+                case 3:
+                  newText = "Promotion";
+                  break;
+              }
+              slideText.innerHTML = newText;
+            },
+          },
         });
       });
     </script>
