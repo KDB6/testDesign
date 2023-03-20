@@ -182,7 +182,7 @@ body.fixed {
 }
 
 /* 변수 */
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   #announcement {
     font-family: "NotoSansKR";
     display: flex;

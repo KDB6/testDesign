@@ -183,54 +183,26 @@ body.fixed {
 
 /* 변수 */
 @media (max-width: 560px) {
-  #section1 {
-    height: 70vh;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  #meun {
+    font-family: "NotoSansKR";
+    color: #858c92;
+    width: 100%;
+    background: #858c92;
   }
-  #section1 #card-container {
-    position: relative; /* 위치 지정 기준 설정 */
-    height: 70vh;
-    overflow: hidden;
+  #meun > nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #meun > nav > ul > li {
+    height: 10vh;
+    width: 25%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  #section1 .card {
-    position: absolute; /* 위치를 고정 */
-    left: 0;
-    width: 100%;
-    height: 10rem;
-    background-color: #a0a0a0;
-    border-radius: 0.8rem;
-    margin-bottom: 5%;
-    transition: top 0.6s ease-in-out; /* top 속성 변경 시 애니메이션 효과 */
-    overflow: hidden;
-  }
-  #section1 .card:nth-child(odd) {
-    border-left: 0.8rem solid #696969;
-    box-sizing: border-box;
-    transition: all 0.6s ease-in-out;
-  }
-  #section1 .card:nth-child(even) {
-    transition: all 0.6s ease-in-out;
-  }
-  #section1 .highlight {
-    background-color: #2c2c2c;
-  }
-  #section1 .move {
-    animation: moveY 0.7s ease-in-out;
-  }
-  @keyframes moveY {
-    from {
-      transform: translateY(-200%);
-      opacity: 0;
-    }
-    to {
-      transform: translateY(0);
-      opacity: 1;
-    }
+  #meun > nav > ul > li > h2 {
+    color: #fff;
   }
 }
