@@ -185,9 +185,11 @@ body.fixed {
 @media (max-width: 560px) {
   .refresh {
     position: fixed;
-    right: 5%;
-    bottom: 13%;
-    transition: all 3s;
+    right: 10%;
+    bottom: 15.5%;
+    z-index: 10;
+    width: 4rem;
+    height: 4rem;
   }
   .refresh > svg {
     width: 4rem;
@@ -195,17 +197,13 @@ body.fixed {
     padding: 1rem 1rem;
     background: #858c92;
     border-radius: 50%;
-    z-index: 1;
   }
   .refresh .spin {
-    animation: spin 3s infinite;
+    animation: spin 2s;
   }
   @keyframes spin {
     0% {
       transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(-180deg);
     }
     100% {
       transform: rotate(-360deg);

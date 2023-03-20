@@ -52,6 +52,7 @@
       <nav>
         <ul>
           <li>
+            <div class="progress"></div>
             <svg
               width="24"
               height="24"
@@ -127,13 +128,20 @@
       const refresh = document.querySelector(".refresh");
       const svg = document.querySelector(".refresh > svg");
 
-      refresh.addEventListener("touchstart", () => {
-        svg.classList.add("spin");
-      });
+      function click() {
+        refresh.addEventListener("click", () => {
+          svg.classList.add("spin");
+        });
 
-      refresh.addEventListener("touchend", () => {
-        svg.classList.remove("spin");
-      });
+        setTimeout(
+          click(),
+          () => {
+            svg.classList.remove("spin");
+          },
+          2000
+        );
+      }
+      click();
     </script>
   </body>
 </html>
