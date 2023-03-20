@@ -169,38 +169,35 @@
           </div>
         </section>
 
-        <!-- Swiper JS -->
-        <script
-          src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"
-        >
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
 
-          const slideTextContainer = document.querySelector(".drive__peo-sit");
-          const slideText = slideTextContainer.querySelector("h1");
+        <script>
+          window.addEventListener("DOMContentLoaded", function () {
+            const slideTextContainer =
+              document.querySelector(".drive__peo-sit");
+            const slideText = slideTextContainer.querySelector("h1");
 
-          let swiper = new Swiper(".mySwiper", {
-            // set options
-          });
+            let swiper = new Swiper(".mySwiper", {});
 
-          swiper.on("slideChange", function () {
-            let slideIndex = swiper.activeIndex;
-            let newText = "";
-
-            switch (slideIndex) {
-              case 0:
-                newText = "Scheduled to operate on 00/00";
-                break;
-              case 1:
-                newText = "Number of orders received per month";
-                break;
-              case 2:
-                newText = "Cargo registration status";
-                break;
-              case 3:
-                newText = "Promotion Title";
-                break;
-            }
-
-            slideText.innerHTML = newText;
+            swiper.on("slideChange", function () {
+              let slideIndex = swiper.activeIndex;
+              let newText = "";
+              switch (slideIndex) {
+                case 0:
+                  newText = "1";
+                  break;
+                case 1:
+                  newText = "2";
+                  break;
+                case 2:
+                  newText = "3";
+                  break;
+                case 3:
+                  newText = "4";
+                  break;
+              }
+              slideText.innerHTML = newText;
+            });
           });
         </script>
 
